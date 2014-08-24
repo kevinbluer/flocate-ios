@@ -24,7 +24,7 @@ import Foundation
 
 
 enum JSONValue {
-    
+
     
     case JNumber(NSNumber)
     case JString(String)
@@ -33,23 +33,23 @@ enum JSONValue {
     case JArray(Array<JSONValue>)
     case JObject(Dictionary<String,JSONValue>)
     case JInvalid(NSError)
-    
+
     var string: String? {
         switch self {
         case .JString(let value):
             return value
         default:
             return nil
-            }
+        }
     }
-    
+  
     var url: NSURL? {
         switch self {
         case .JString(let value):
             return NSURL(string: value)
         default:
             return nil
-            }
+        }
     }
     var number: NSNumber? {
         switch self {
@@ -57,7 +57,7 @@ enum JSONValue {
             return value
         default:
             return nil
-            }
+        }
     }
     
     var double: Double? {
@@ -68,7 +68,7 @@ enum JSONValue {
             return (value as NSString).doubleValue
         default:
             return nil
-            }
+        }
     }
     
     var integer: Int? {
@@ -81,7 +81,7 @@ enum JSONValue {
             return (value as NSString).integerValue
         default:
             return nil
-            }
+        }
     }
     
     var bool: Bool? {
@@ -94,7 +94,7 @@ enum JSONValue {
             return (value as NSString).boolValue
         default:
             return nil
-            }
+        }
     }
     
     var array: Array<JSONValue>? {
@@ -103,7 +103,7 @@ enum JSONValue {
             return value
         default:
             return nil
-            }
+        }
     }
     
     var object: Dictionary<String, JSONValue>? {
@@ -112,7 +112,7 @@ enum JSONValue {
             return value
         default:
             return nil
-            }
+        }
     }
     
     var first: JSONValue? {
@@ -124,7 +124,7 @@ enum JSONValue {
             return value
         default:
             return nil
-            }
+        }
     }
     
     var last: JSONValue? {
@@ -136,7 +136,7 @@ enum JSONValue {
             return value
         default:
             return nil
-            }
+        }
     }
     
     init (_ data: NSData!){
@@ -150,7 +150,7 @@ enum JSONValue {
         }else{
             self = JSONValue.JInvalid(NSError(domain: "JSONErrorDomain", code: 1000, userInfo: [NSLocalizedDescriptionKey:"JSON Init Error: Invalid Value Passed In init()"]))
         }
-        
+
     }
     
     init (_ rawObject: AnyObject) {
@@ -189,7 +189,7 @@ enum JSONValue {
             self = .JInvalid(NSError(domain: "JSONErrorDomain", code: 1000, userInfo: [NSLocalizedDescriptionKey:"JSON Init Error: Invalid Value Passed In init()"]))
         }
     }
-    
+
     subscript(index: Int) -> JSONValue {
         get {
             switch self {
@@ -200,7 +200,7 @@ enum JSONValue {
                     if let breadcrumb = userInfo["JSONErrorBreadCrumbKey"] as? NSString{
                         let newBreadCrumb = (breadcrumb as String) + "/\(index)"
                         let newUserInfo = [NSLocalizedDescriptionKey: "JSON Keypath Error: Incorrect Keypath \"\(newBreadCrumb)\"",
-                            "JSONErrorBreadCrumbKey": newBreadCrumb]
+                                           "JSONErrorBreadCrumbKey": newBreadCrumb]
                         return JSONValue.JInvalid(NSError(domain: "JSONErrorDomain", code: 1002, userInfo: newUserInfo))
                     }
                 }
@@ -208,7 +208,7 @@ enum JSONValue {
             default:
                 let breadcrumb = "\(index)"
                 let newUserInfo = [NSLocalizedDescriptionKey: "JSON Keypath Error: Incorrect Keypath \"\(breadcrumb)\"",
-                    "JSONErrorBreadCrumbKey": breadcrumb]
+                                    "JSONErrorBreadCrumbKey": breadcrumb]
                 return JSONValue.JInvalid(NSError(domain: "JSONErrorDomain", code: 1002, userInfo: newUserInfo))
             }
         }
@@ -223,7 +223,7 @@ enum JSONValue {
                 }else {
                     let breadcrumb = "\(key)"
                     let newUserInfo = [NSLocalizedDescriptionKey: "JSON Keypath Error: Incorrect Keypath \"\(breadcrumb)\"",
-                        "JSONErrorBreadCrumbKey": breadcrumb]
+                                        "JSONErrorBreadCrumbKey": breadcrumb]
                     return JSONValue.JInvalid(NSError(domain: "JSONErrorDomain", code: 1002, userInfo: newUserInfo))
                 }
             case .JInvalid(let error):
@@ -253,7 +253,7 @@ extension JSONValue: Printable {
             return error.localizedDescription
         default:
             return _printableString("")
-            }
+        }
     }
     
     var rawJSONString: String {
@@ -292,7 +292,7 @@ extension JSONValue: Printable {
         case .JInvalid:
             return "INVALID_JSON_VALUE"
             }
-    }
+  }
     
     func _printableString(indent: String) -> String {
         switch self {
@@ -335,7 +335,7 @@ extension JSONValue: BooleanType {
             return false
         default:
             return true
-            }
+        }
     }
 }
 

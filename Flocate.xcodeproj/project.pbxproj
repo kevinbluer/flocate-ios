@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7919A86B1100935E91 /* FlocateSettings.swift */; };
+		23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7D19A9F12C00935E91 /* RegisterLogin.swift */; };
 		237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C3199F4EE300F2C856 /* AppDelegate.swift */; };
 		237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C5199F4EE300F2C856 /* LocationSave.swift */; };
 		237552C8199F4EE300F2C856 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C7199F4EE300F2C856 /* LocationView.swift */; };
 		237552CB199F4EE300F2C856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237552C9199F4EE300F2C856 /* Main.storyboard */; };
 		237552CD199F4EE300F2C856 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237552CC199F4EE300F2C856 /* Images.xcassets */; };
 		237552D9199F4EE300F2C856 /* FlocateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552D8199F4EE300F2C856 /* FlocateTests.swift */; };
-		23D746CA19A4407D007A5E98 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D746C919A4407D007A5E98 /* CoreLocation.framework */; };
+		23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878019A842B400F075E8 /* MapKit.framework */; };
+		23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878219A842CE00F075E8 /* CoreLocation.framework */; };
+		23F72BAB19A853BE00C119E9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F72BAA19A853BE00C119E9 /* data.plist */; };
+		23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */; };
 		23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */; };
-		23FBA1E519A0F4E200E95BC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FBA1E419A0F4E200E95BC8 /* MapKit.framework */; };
 		23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */; };
 		23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23222A7919A86B1100935E91 /* FlocateSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlocateSettings.swift; sourceTree = "<group>"; };
+		23222A7D19A9F12C00935E91 /* RegisterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterLogin.swift; sourceTree = "<group>"; };
 		237552BE199F4EE300F2C856 /* Flocate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flocate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237552C2199F4EE300F2C856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237552C3199F4EE300F2C856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +47,11 @@
 		237552D2199F4EE300F2C856 /* FlocateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlocateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237552D7199F4EE300F2C856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237552D8199F4EE300F2C856 /* FlocateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlocateTests.swift; sourceTree = "<group>"; };
-		23D746C919A4407D007A5E98 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23A0878019A842B400F075E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		23A0878219A842CE00F075E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23F72BAA19A853BE00C119E9 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 		23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Flocate/SwiftyJSON.swift; sourceTree = "<group>"; };
-		23FBA1E419A0F4E200E95BC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMap.swift; sourceTree = "<group>"; };
 		23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D746CA19A4407D007A5E98 /* CoreLocation.framework in Frameworks */,
-				23FBA1E519A0F4E200E95BC8 /* MapKit.framework in Frameworks */,
+				23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */,
+				23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,10 +98,13 @@
 		237552C0199F4EE300F2C856 /* Flocate */ = {
 			isa = PBXGroup;
 			children = (
+				23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */,
 				237552C3199F4EE300F2C856 /* AppDelegate.swift */,
+				23222A7D19A9F12C00935E91 /* RegisterLogin.swift */,
 				237552C5199F4EE300F2C856 /* LocationSave.swift */,
 				237552C7199F4EE300F2C856 /* LocationView.swift */,
 				23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */,
+				23222A7919A86B1100935E91 /* FlocateSettings.swift */,
 				23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */,
 				237552C9199F4EE300F2C856 /* Main.storyboard */,
 				237552CC199F4EE300F2C856 /* Images.xcassets */,
@@ -106,6 +117,7 @@
 		237552C1199F4EE300F2C856 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23F72BAA19A853BE00C119E9 /* data.plist */,
 				237552C2199F4EE300F2C856 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -131,8 +143,8 @@
 		23D746CB19A44174007A5E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				23D746C919A4407D007A5E98 /* CoreLocation.framework */,
-				23FBA1E419A0F4E200E95BC8 /* MapKit.framework */,
+				23A0878219A842CE00F075E8 /* CoreLocation.framework */,
+				23A0878019A842B400F075E8 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F72BAB19A853BE00C119E9 /* data.plist in Resources */,
 				237552CB199F4EE300F2C856 /* Main.storyboard in Resources */,
 				237552CD199F4EE300F2C856 /* Images.xcassets in Resources */,
 			);
@@ -254,8 +267,11 @@
 				237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */,
 				237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */,
 				23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */,
+				23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */,
+				23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */,
 				23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */,
 				23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */,
+				23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +473,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */,
+			);
+			currentVersion = 23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */;
+			name = Locations.xcdatamodeld;
+			path = Model/Locations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 237552B6199F4EE200F2C856 /* Project object */;
 }

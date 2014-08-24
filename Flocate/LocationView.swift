@@ -8,13 +8,37 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var loadLatest: UIBarButtonItem!
-    @IBOutlet weak var placesList: UILabel!
-                            
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+    }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        cell.textLabel.text = self.items[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        println("You selected cell #\(indexPath.row)!")
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+//        let vc = storyboard.instantiateViewControllerWithIdentifier("xyz") as UIViewController;
+//        self.presentViewController(vc, animated: true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +48,11 @@ class SecondViewController: UIViewController {
 
     @IBAction func clickLoadLatest(sender: AnyObject) {
         
-        // display the loading message
-        placesList.hidden = false
-        placesList.text = "Loading..."
+        self.items = []
+        self.tableView.reloadData()
         
         var request = NSMutableURLRequest(URL: NSURL(string: "http://api.bluer.com/checkin/get"))
-        var session = NSURLSession.sharedSession()
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
         request.HTTPMethod = "POST"
         
         var params = ["message":""] as Dictionary
@@ -39,27 +62,22 @@ class SecondViewController: UIViewController {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
+        
+        
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-
-            println("Response: \(error)")
-            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            
-            self.placesList.text = "Loaded :)"
             
             let json = JSONValue(data)
             
-            var locationList = ""
-            
             if let locationArray = json.array {
                 for location in locationArray {
-                    locationList += location["message"].string! + " "
+                    
+                    self.items += [location["message"].string! + " (" + location["date"].string! + ")"]
                 }
             }
             
-            self.placesList.text = locationList;
+            self.items = self.items.reverse()
             
-            // TODO - Create entries in the table :)
-            
+            self.tableView.reloadData()
         })
         
         task.resume()
