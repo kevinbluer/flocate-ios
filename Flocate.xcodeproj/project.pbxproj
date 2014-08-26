@@ -20,6 +20,8 @@
 		23908C5419AB4EE7007549BB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5319AB4EE7007549BB /* StringExtensions.swift */; };
 		23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878019A842B400F075E8 /* MapKit.framework */; };
 		23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878219A842CE00F075E8 /* CoreLocation.framework */; };
+		23A8212C19AC7A12003FCF85 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A8212B19AC7A12003FCF85 /* StoreKit.framework */; };
+		23A8212E19AC7A59003FCF85 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A8212D19AC7A59003FCF85 /* GameKit.framework */; };
 		23F72BAB19A853BE00C119E9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F72BAA19A853BE00C119E9 /* data.plist */; };
 		23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */; };
 		23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */; };
@@ -55,6 +57,8 @@
 		23908C5319AB4EE7007549BB /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Flocate/StringExtensions.swift; sourceTree = "<group>"; };
 		23A0878019A842B400F075E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23A0878219A842CE00F075E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23A8212B19AC7A12003FCF85 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		23A8212D19AC7A59003FCF85 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		23F72BAA19A853BE00C119E9 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 		23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Flocate/SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				23908C5019AA1BCC007549BB /* QuartzCore.framework in Frameworks */,
 				23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */,
 				23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */,
+				23A8212C19AC7A12003FCF85 /* StoreKit.framework in Frameworks */,
+				23A8212E19AC7A59003FCF85 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,8 @@
 		23D746CB19A44174007A5E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23A8212D19AC7A59003FCF85 /* GameKit.framework */,
+				23A8212B19AC7A12003FCF85 /* StoreKit.framework */,
 				23908C4F19AA1BCC007549BB /* QuartzCore.framework */,
 				23A0878219A842CE00F075E8 /* CoreLocation.framework */,
 				23A0878019A842B400F075E8 /* MapKit.framework */,
@@ -219,6 +227,12 @@
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 6MWN5BMY3A;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -403,10 +417,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Flocate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,10 +432,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Flocate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

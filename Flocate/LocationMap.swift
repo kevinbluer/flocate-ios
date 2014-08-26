@@ -15,6 +15,7 @@ class LocationMapController: UIViewController {
  
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
+        
     }
     
     override func viewDidLoad() {
@@ -37,11 +38,17 @@ class LocationMapController: UIViewController {
             let json = JSONValue(data)
             
             if let locationArray = json.array {
+                var counter:Int = 0
+                
+                // reverse the array to show latest first below
+                let locationArray = locationArray.reverse()
+                
                 for location in locationArray {
                     
-                    println(location["location"][0].double)
+                    let lat:Double = location["location"][0].double! as Double
+                    let lng:Double = location["location"][1].double! as Double
                     
-                    var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location["location"][0].double!, location["location"][1].double!)
+                    var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
                     
                     // add new annotation
                     var pinLocation = MKPointAnnotation()
@@ -50,13 +57,29 @@ class LocationMapController: UIViewController {
                     pinLocation.subtitle = location["doing"].string
                     self.mapLocationsAll.addAnnotation(pinLocation)
                     
+                    // zoom in on the most recent place 
+                    if counter == 0 {
+                        
+                        var latDelta:CLLocationDegrees = 0.01
+                        var lngDelta:CLLocationDegrees = 0.01
+                        
+                        var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lngDelta)
+                        var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
+                        //var region:MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, theSpan)
+                        
+                        //self.mapLocationsAll.setRegion(region, animated: true)
+                    }
+                    
+                    counter++
                 }
             }
+            
+            
         })
         
         task.resume()
         
-        // TODO - set the map to the last selected location
+        
     }
     
     override func didReceiveMemoryWarning() {

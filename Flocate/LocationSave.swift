@@ -27,7 +27,19 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let rect : CGRect = CGRectMake(0,0,320,100)
+        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
+        let gradient : CAGradientLayer = CAGradientLayer()
+        gradient.frame = vista.bounds
+        
+        let cor1 = UIColor(hex:0xABCA8E).CGColor
+        let cor2 = UIColor(hex:0x7DA93D).CGColor
+        
+        let arrayColors: Array <AnyObject> = [cor1, cor2]
+        
+        gradient.colors = arrayColors
+        view.layer.insertSublayer(gradient, atIndex: 0)
         
         // set the title bars text to white
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
@@ -46,9 +58,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // TODO - determine if use is loggedin (NSUserDefaults)
         // TODO - turn this into the dashboard screen
         
+        // attempt to get the username from NSUserDefaults
         var username: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("Username")
-        println(username)
         
+        // see if the user exists, otherwish present the RegisterLogin ViewController
         if (username == nil) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let vc = storyboard.instantiateViewControllerWithIdentifier("signup") as UIViewController;

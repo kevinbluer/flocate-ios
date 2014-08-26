@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FlocateSettings: UIViewController {
     @IBOutlet weak var settingsFirstname: UILabel!
@@ -25,6 +26,7 @@ class FlocateSettings: UIViewController {
         
         settingsFirstname.text = dataDictionary!["firstname"] as String
         
+        // var locations = Locations()
         
     }
     @IBAction func logoutButton(sender: AnyObject) {
