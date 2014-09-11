@@ -12,6 +12,8 @@ import MapKit
 
 class LocationMapController: UIViewController {
     @IBOutlet weak var mapLocationsAll: MKMapView!
+    var latRecent:Double? = nil
+    var lngRecent:Double? = nil
  
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
@@ -45,10 +47,13 @@ class LocationMapController: UIViewController {
                 
                 for location in locationArray {
                     
-                    let lat:Double = location["location"][0].double!
-                    let lng:Double = location["location"][1].double!
+                    var lat:Double = location["location"][0].double!
+                    var lng:Double = location["location"][1].double!
                     
                     var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
+                    
+                    self.latRecent = lat
+                    self.lngRecent = lng
                     
                     // add new annotation
                     var pinLocation = MKPointAnnotation()
@@ -64,8 +69,8 @@ class LocationMapController: UIViewController {
                         var lngDelta:CLLocationDegrees = 0.01
                         
                         var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lngDelta)
-                        var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
-                        //var region:MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, theSpan)
+                        var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(self.latRecent!, self.lngRecent!)
+                        // var region:MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, theSpan)
                         
                         // self.mapLocationsAll.setRegion(region, animated: true)
                     }

@@ -28,6 +28,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TODO - determine the orientation (may need to handle orientation changes too)
+        // Consider programmatically adding a constraint to the sublayer
+        
         let rect : CGRect = CGRectMake(0,0,320,100)
         var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
         let gradient : CAGradientLayer = CAGradientLayer()
@@ -41,8 +44,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         gradient.colors = arrayColors
         view.layer.insertSublayer(gradient, atIndex: 0)
         
+        
+        // style the map
         mapCurrentLocation.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
         mapCurrentLocation.layer.borderWidth = 2
+        
         
         // set the title bars text to white
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
@@ -51,7 +57,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
+        
+        // check if the OS is iOS 8
+        var version:NSString = UIDevice.currentDevice().systemVersion as NSString;
+        if  version.doubleValue >= 8 {
+            manager.requestAlwaysAuthorization()
+        }
+        
         manager.startUpdatingLocation()
     }
     
@@ -109,12 +121,34 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
 
     @IBAction func saveLocation(sender: AnyObject) {
         
+        println("saving location")
+        
         // check that we have the location first
         if (lat == nil && lng == nil) {
             
-            var alert = UIAlertController(title: "Location Unknown", message: "Flocate was unable to determine your location", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+                
+                println("UIAlertController can be instantiated")
+                
+                //make and use a UIAlertController
+                var alert = UIAlertController(title: "Location Unknown", message: "Flocate was unable to determine your location", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                println("UIAlertController can NOT be instantiated")
+                
+                // make and use a UIAlertView
+                let alert = UIAlertView()
+                alert.title = "Alert"
+                alert.message = "Here's a message"
+                alert.addButtonWithTitle("Understod")
+                alert.show()
+            }
+            
+            
             
             saveLocationButton.titleLabel?.text = "Save Location"
             saveLocationButton.enabled = true
@@ -122,9 +156,27 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // also theck that the user has
         } else if (locationNote.text == "") {
             
-            var alert = UIAlertController(title: "Enter Name", message: "Please enter a place name", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+                
+                println("UIAlertController can be instantiated")
+                
+                //make and use a UIAlertController
+                var alert = UIAlertController(title: "Enter Name", message: "Please enter a place name", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                println("UIAlertController can NOT be instantiated")
+                
+                // make and use a UIAlertView
+                let alert = UIAlertView()
+                alert.title = "Enter Name"
+                alert.message = "Please enter a place name"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
             
         } else {
             
