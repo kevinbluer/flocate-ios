@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class SecondViewController: UIViewController, UITableViewDelegate  {
     @IBOutlet weak var loadLatest: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,7 +28,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        cell.textLabel.text = self.items[indexPath.row]
+        cell.textLabel?.text = self.items[indexPath.row]
         
         return cell
     }

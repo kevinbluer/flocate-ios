@@ -20,8 +20,6 @@
 		23908C5419AB4EE7007549BB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5319AB4EE7007549BB /* StringExtensions.swift */; };
 		23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878019A842B400F075E8 /* MapKit.framework */; };
 		23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878219A842CE00F075E8 /* CoreLocation.framework */; };
-		23A8212C19AC7A12003FCF85 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A8212B19AC7A12003FCF85 /* StoreKit.framework */; };
-		23A8212E19AC7A59003FCF85 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A8212D19AC7A59003FCF85 /* GameKit.framework */; };
 		23F72BAB19A853BE00C119E9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F72BAA19A853BE00C119E9 /* data.plist */; };
 		23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */; };
 		23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */; };
@@ -74,8 +72,6 @@
 				23908C5019AA1BCC007549BB /* QuartzCore.framework in Frameworks */,
 				23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */,
 				23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */,
-				23A8212C19AC7A12003FCF85 /* StoreKit.framework in Frameworks */,
-				23A8212E19AC7A59003FCF85 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +227,7 @@
 								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -366,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

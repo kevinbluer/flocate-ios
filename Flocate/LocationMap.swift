@@ -45,8 +45,8 @@ class LocationMapController: UIViewController {
                 
                 for location in locationArray {
                     
-                    let lat:Double = location["location"][0].double! as Double
-                    let lng:Double = location["location"][1].double! as Double
+                    let lat:Double = location["location"][0].double!
+                    let lng:Double = location["location"][1].double!
                     
                     var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
                     
@@ -67,7 +67,7 @@ class LocationMapController: UIViewController {
                         var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude)
                         //var region:MKCoordinateRegion = MKCoordinateRegionMake(currentLocation, theSpan)
                         
-                        //self.mapLocationsAll.setRegion(region, animated: true)
+                        // self.mapLocationsAll.setRegion(region, animated: true)
                     }
                     
                     counter++

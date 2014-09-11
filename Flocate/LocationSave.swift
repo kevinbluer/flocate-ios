@@ -41,6 +41,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         gradient.colors = arrayColors
         view.layer.insertSublayer(gradient, atIndex: 0)
         
+        mapCurrentLocation.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
+        mapCurrentLocation.layer.borderWidth = 2
+        
         // set the title bars text to white
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
         
@@ -113,7 +116,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             
-            saveLocationButton.titleLabel.text = "Save Location"
+            saveLocationButton.titleLabel?.text = "Save Location"
             saveLocationButton.enabled = true
         
         // also theck that the user has
@@ -126,7 +129,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         } else {
             
             // update the textbox
-            saveLocationButton.titleLabel.text = "Saving..."
+            saveLocationButton.titleLabel?.text = "Saving..."
             saveLocationButton.enabled = false
             
             // create the empty params dictionary
@@ -166,7 +169,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                     self.locationDoing.text = ""
                     
                     // change the values of the save button back
-                    self.saveLocationButton.titleLabel.text = "Save Location"
+                    self.saveLocationButton.titleLabel?.text = "Save Location"
                     self.saveLocationButton.enabled = true
                 }
             })
