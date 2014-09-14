@@ -11,6 +11,8 @@ import CoreData
 
 class FlocateSettings: UIViewController {
     @IBOutlet weak var settingsFirstname: UILabel!
+    @IBOutlet weak var settingsLastname: UILabel!
+    @IBOutlet weak var settingsEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class FlocateSettings: UIViewController {
         let arrayColors: Array <AnyObject> = [cor1, cor2]
         
         gradient.colors = arrayColors
-        view.layer.insertSublayer(gradient, atIndex: 0)
+        // view.layer.insertSublayer(gradient, atIndex: 0)
         
         
         var dataDictionary: AnyObject? = nil;

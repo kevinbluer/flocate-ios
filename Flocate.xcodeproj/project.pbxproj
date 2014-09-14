@@ -15,13 +15,22 @@
 		237552CB199F4EE300F2C856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237552C9199F4EE300F2C856 /* Main.storyboard */; };
 		237552CD199F4EE300F2C856 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237552CC199F4EE300F2C856 /* Images.xcassets */; };
 		237552D9199F4EE300F2C856 /* FlocateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552D8199F4EE300F2C856 /* FlocateTests.swift */; };
-		23908C5019AA1BCC007549BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23908C4F19AA1BCC007549BB /* QuartzCore.framework */; };
 		23908C5219AA1FC3007549BB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5119AA1FC3007549BB /* UIColorExtensions.swift */; };
 		23908C5419AB4EE7007549BB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5319AB4EE7007549BB /* StringExtensions.swift */; };
-		23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878019A842B400F075E8 /* MapKit.framework */; };
-		23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A0878219A842CE00F075E8 /* CoreLocation.framework */; };
+		23CA0B5519C5A6CC002C71F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0B5419C5A6CC002C71F0 /* CoreGraphics.framework */; };
+		23CA0B5719C5A6DA002C71F0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0B5619C5A6DA002C71F0 /* CoreLocation.framework */; };
+		23CA0B5919C5A6E3002C71F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0B5819C5A6E3002C71F0 /* MapKit.framework */; };
+		23CA0BA819C5AA66002C71F0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BA719C5AA66002C71F0 /* AudioToolbox.framework */; };
+		23CA0BAA19C5AA6F002C71F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BA919C5AA6F002C71F0 /* CFNetwork.framework */; };
+		23CA0BAC19C5AA7F002C71F0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BAB19C5AA7F002C71F0 /* libz.dylib */; };
+		23CA0BAE19C5AA84002C71F0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BAD19C5AA84002C71F0 /* MobileCoreServices.framework */; };
+		23CA0BB019C5AA8B002C71F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BAF19C5AA8B002C71F0 /* QuartzCore.framework */; };
+		23CA0BB219C5AA90002C71F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BB119C5AA90002C71F0 /* Security.framework */; };
+		23CA0BB419C5AA97002C71F0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BB319C5AA97002C71F0 /* StoreKit.framework */; };
+		23CA0BB619C5AA9E002C71F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BB519C5AA9E002C71F0 /* SystemConfiguration.framework */; };
+		23CA0BBC19C5AB13002C71F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BBA19C5AB13002C71F0 /* Bolts.framework */; };
+		23CA0BBD19C5AB13002C71F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BBB19C5AB13002C71F0 /* Parse.framework */; };
 		23F72BAB19A853BE00C119E9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F72BAA19A853BE00C119E9 /* data.plist */; };
-		23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */; };
 		23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */; };
 		23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */; };
 		23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */; };
@@ -50,15 +59,23 @@
 		237552D2199F4EE300F2C856 /* FlocateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlocateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237552D7199F4EE300F2C856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237552D8199F4EE300F2C856 /* FlocateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlocateTests.swift; sourceTree = "<group>"; };
-		23908C4F19AA1BCC007549BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		23908C5119AA1FC3007549BB /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		23908C5319AB4EE7007549BB /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Flocate/StringExtensions.swift; sourceTree = "<group>"; };
-		23A0878019A842B400F075E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		23A0878219A842CE00F075E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		23A8212B19AC7A12003FCF85 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		23A8212D19AC7A59003FCF85 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		23CA0B5419C5A6CC002C71F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		23CA0B5619C5A6DA002C71F0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23CA0B5819C5A6E3002C71F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		23CA0BA719C5AA66002C71F0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		23CA0BA919C5AA6F002C71F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		23CA0BAB19C5AA7F002C71F0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		23CA0BAD19C5AA84002C71F0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		23CA0BAF19C5AA8B002C71F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		23CA0BB119C5AA90002C71F0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		23CA0BB319C5AA97002C71F0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		23CA0BB519C5AA9E002C71F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		23CA0BB719C5AAAA002C71F0 /* Flocate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flocate-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		23CA0BBA19C5AB13002C71F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		23CA0BBB19C5AB13002C71F0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		23F72BAA19A853BE00C119E9 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 		23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Flocate/SwiftyJSON.swift; sourceTree = "<group>"; };
 		23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMap.swift; sourceTree = "<group>"; };
 		23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -69,9 +86,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23908C5019AA1BCC007549BB /* QuartzCore.framework in Frameworks */,
-				23A0878319A842CE00F075E8 /* CoreLocation.framework in Frameworks */,
-				23A0878119A842B400F075E8 /* MapKit.framework in Frameworks */,
+				23CA0BB619C5AA9E002C71F0 /* SystemConfiguration.framework in Frameworks */,
+				23CA0BB419C5AA97002C71F0 /* StoreKit.framework in Frameworks */,
+				23CA0BB219C5AA90002C71F0 /* Security.framework in Frameworks */,
+				23CA0BBC19C5AB13002C71F0 /* Bolts.framework in Frameworks */,
+				23CA0BB019C5AA8B002C71F0 /* QuartzCore.framework in Frameworks */,
+				23CA0BAE19C5AA84002C71F0 /* MobileCoreServices.framework in Frameworks */,
+				23CA0BBD19C5AB13002C71F0 /* Parse.framework in Frameworks */,
+				23CA0BAC19C5AA7F002C71F0 /* libz.dylib in Frameworks */,
+				23CA0BAA19C5AA6F002C71F0 /* CFNetwork.framework in Frameworks */,
+				23CA0BA819C5AA66002C71F0 /* AudioToolbox.framework in Frameworks */,
+				23CA0B5919C5A6E3002C71F0 /* MapKit.framework in Frameworks */,
+				23CA0B5719C5A6DA002C71F0 /* CoreLocation.framework in Frameworks */,
+				23CA0B5519C5A6CC002C71F0 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +134,7 @@
 		237552C0199F4EE300F2C856 /* Flocate */ = {
 			isa = PBXGroup;
 			children = (
-				23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */,
+				23CA0BB719C5AAAA002C71F0 /* Flocate-Bridging-Header.h */,
 				237552C3199F4EE300F2C856 /* AppDelegate.swift */,
 				23222A7D19A9F12C00935E91 /* RegisterLogin.swift */,
 				237552C5199F4EE300F2C856 /* LocationSave.swift */,
@@ -152,11 +179,19 @@
 		23D746CB19A44174007A5E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				23A8212D19AC7A59003FCF85 /* GameKit.framework */,
-				23A8212B19AC7A12003FCF85 /* StoreKit.framework */,
-				23908C4F19AA1BCC007549BB /* QuartzCore.framework */,
-				23A0878219A842CE00F075E8 /* CoreLocation.framework */,
-				23A0878019A842B400F075E8 /* MapKit.framework */,
+				23CA0BBA19C5AB13002C71F0 /* Bolts.framework */,
+				23CA0BBB19C5AB13002C71F0 /* Parse.framework */,
+				23CA0BB519C5AA9E002C71F0 /* SystemConfiguration.framework */,
+				23CA0BB319C5AA97002C71F0 /* StoreKit.framework */,
+				23CA0BB119C5AA90002C71F0 /* Security.framework */,
+				23CA0BAF19C5AA8B002C71F0 /* QuartzCore.framework */,
+				23CA0BAD19C5AA84002C71F0 /* MobileCoreServices.framework */,
+				23CA0BAB19C5AA7F002C71F0 /* libz.dylib */,
+				23CA0BA919C5AA6F002C71F0 /* CFNetwork.framework */,
+				23CA0BA719C5AA66002C71F0 /* AudioToolbox.framework */,
+				23CA0B5819C5A6E3002C71F0 /* MapKit.framework */,
+				23CA0B5619C5A6DA002C71F0 /* CoreLocation.framework */,
+				23CA0B5419C5A6CC002C71F0 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,7 +323,6 @@
 				237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */,
 				237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */,
 				23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */,
-				23F72BAE19A8587C00C119E9 /* Locations.xcdatamodeld in Sources */,
 				23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */,
 				23908C5419AB4EE7007549BB /* StringExtensions.swift in Sources */,
 				23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */,
@@ -412,13 +446,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/bluer/Dropbox/Code/iOS/Frameworks,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Flocate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flocate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -427,13 +473,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/bluer/Dropbox/Code/iOS/Frameworks,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Flocate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flocate-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -502,20 +559,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		23F72BAC19A8587C00C119E9 /* Locations.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */,
-			);
-			currentVersion = 23F72BAD19A8587C00C119E9 /* Locations.xcdatamodel */;
-			name = Locations.xcdatamodeld;
-			path = Model/Locations.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 237552B6199F4EE200F2C856 /* Project object */;
 }

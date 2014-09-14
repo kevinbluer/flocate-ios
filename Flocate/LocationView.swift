@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController, UITableViewDelegate  {
     @IBOutlet weak var loadLatest: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    var firstLoad:Bool = true
     
     var items: [String] = []
     
@@ -18,6 +19,11 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         super.viewDidLoad()
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        if firstLoad {
+            populateTable()
+            firstLoad = false
+        }
         
     }
     
@@ -34,7 +40,7 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        println("You selected cell #\(indexPath.row)!")
+        
         
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil);
 //        let vc = storyboard.instantiateViewControllerWithIdentifier("xyz") as UIViewController;
@@ -48,6 +54,10 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
 
     @IBAction func clickLoadLatest(sender: AnyObject) {
         
+        populateTable()
+    }
+    
+    func populateTable() {
         self.items = []
         self.tableView.reloadData()
         
@@ -62,8 +72,6 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        
-        
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             
             let json = JSONValue(data)
@@ -71,7 +79,7 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
             if let locationArray = json.array {
                 for location in locationArray {
                     
-                    self.items += [location["message"].string! + " (" + location["date"].string! + ")"]
+                    self.items += [location["message"].string!] // + " (" + location["date"].string! + ")"]
                 }
             }
             
