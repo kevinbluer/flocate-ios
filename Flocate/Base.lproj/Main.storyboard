@@ -31,14 +31,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-bs-8Uq">
                                 <rect key="frame" x="27" y="247" width="546" height="184"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add a Footprint" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7V-gu-wwo">
-                                <rect key="frame" x="217" y="28" width="167" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Leave a tiny foot footprint..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hho-0S-Qip">
-                                <rect key="frame" x="211" y="70" width="178" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Leave a tiny footprint..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hho-0S-Qip">
+                                <rect key="frame" x="225" y="70" width="149" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -59,6 +53,9 @@
                                     <action selector="saveLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="4Wn-Sf-r0x"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="953-paw-print-selected" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-1O-8CH">
+                                <rect key="frame" x="288" y="28" width="25" height="25"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -71,17 +68,16 @@
                             <constraint firstAttribute="centerX" secondItem="hho-0S-Qip" secondAttribute="centerX" id="O6W-bd-JGA"/>
                             <constraint firstAttribute="centerX" secondItem="Gpu-Xc-ZuN" secondAttribute="centerX" id="Uen-ZO-WAS"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ogq-sE-z7g" secondAttribute="bottom" constant="41" id="XMM-xC-lnl"/>
-                            <constraint firstAttribute="centerX" secondItem="g7V-gu-wwo" secondAttribute="centerX" id="Y4W-nR-9RE"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="top" secondItem="Gpu-Xc-ZuN" secondAttribute="bottom" constant="17" id="eQa-7t-vda"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="trailing" secondItem="Gpu-Xc-ZuN" secondAttribute="trailing" id="gQj-Oc-i6y"/>
-                            <constraint firstItem="hlF-o4-nN2" firstAttribute="centerX" secondItem="g7V-gu-wwo" secondAttribute="centerX" id="loz-SH-47D"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="leading" secondItem="W5y-bs-8Uq" secondAttribute="leading" id="ngG-XW-tT1"/>
+                            <constraint firstAttribute="centerX" secondItem="K1l-1O-8CH" secondAttribute="centerX" id="oET-zd-UMc"/>
                             <constraint firstItem="W5y-bs-8Uq" firstAttribute="top" secondItem="hlF-o4-nN2" secondAttribute="bottom" constant="42" id="qFt-o6-p0M"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="trailing" secondItem="W5y-bs-8Uq" secondAttribute="trailing" id="uHo-CL-b2R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gpu-Xc-ZuN" secondAttribute="trailing" constant="20" id="yqY-EC-Gj7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" image="945-radar" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Add" image="953-paw-print" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="locationDoing" destination="hlF-o4-nN2" id="Lfb-Ej-idz"/>
                         <outlet property="locationNote" destination="Gpu-Xc-ZuN" id="LoZ-js-RWv"/>
@@ -93,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-382"/>
         </scene>
-        <!--Flocate Settings-->
+        <!--Friends-->
         <scene sceneID="qvf-Nl-tmJ">
             <objects>
                 <viewController id="p2Z-cQ-mhN" customClass="FlocateSettings" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +130,7 @@
                             <constraint firstAttribute="centerX" secondItem="4P9-sx-gSs" secondAttribute="centerX" id="nBZ-Ze-l1c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="hQi-Qd-MDF"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="779-users" id="hQi-Qd-MDF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingsFirstname" destination="Zcs-ae-sni" id="4aU-PY-IRQ"/>
@@ -172,6 +168,7 @@
                                 <rect key="frame" x="71" y="42" width="456" height="44"/>
                                 <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="42" width="400" height="44"/>
@@ -195,6 +192,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonMapPrevious:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="Enw-hL-wAv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbS-rh-skL">
                                 <rect key="frame" x="542" y="48" width="30" height="30"/>
@@ -202,6 +202,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonMapNext:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="CfR-qJ-gV5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -223,7 +226,7 @@
                             <constraint firstItem="UxE-EZ-xPn" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="-17" id="ykn-sg-NKU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="903-squiggle" id="GkO-vA-tyE"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="852-map" id="GkO-vA-tyE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapLocationsAll" destination="asF-2D-HKc" id="S83-Z0-Lyk"/>
@@ -256,6 +259,15 @@
                                             <connections>
                                                 <action selector="clickLoadLatest:" destination="8rJ-Kc-sve" id="P0l-cB-ceV"/>
                                             </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="nBE-Lr-YXw">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6vl-Ew-00k">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -293,7 +305,7 @@
                             <constraint firstItem="5W9-ob-LZD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="voO-Ez-ICk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Places" image="953-paw-print-selected" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Places" image="1100-list-2" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="loadLatest" destination="AuV-MM-hHC" id="wLa-zF-aF7"/>
                         <outlet property="tableView" destination="5W9-ob-LZD" id="zBF-Zj-YUl"/>
@@ -384,8 +396,8 @@
                     <connections>
                         <outlet property="XYZ" destination="W28-zg-YXA" id="Hfy-pD-WOq"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="4Ko-IW-dUo" kind="relationship" relationship="viewControllers" id="qiv-E5-gxA"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="p2Z-cQ-mhN" kind="relationship" relationship="viewControllers" id="Mzu-Ut-Fzc"/>
                     </connections>
                 </tabBarController>
@@ -395,8 +407,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="903-squiggle" width="28" height="14"/>
-        <image name="945-radar" width="28" height="28"/>
+        <image name="1100-list-2" width="28" height="22"/>
+        <image name="779-users" width="28" height="25"/>
+        <image name="852-map" width="28" height="24"/>
+        <image name="953-paw-print" width="28" height="28"/>
         <image name="953-paw-print-selected" width="28" height="28"/>
     </resources>
 </document>

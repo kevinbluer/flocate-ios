@@ -34,7 +34,7 @@ class RegisterLoginViewController: UIViewController {
         let arrayColors: Array <AnyObject> = [cor1, cor2]
         
         gradient.colors = arrayColors
-        //view.layer.insertSublayer(gradient, atIndex: 0)
+        view.layer.insertSublayer(gradient, atIndex: 0)
     }
     
     @IBAction func loginButtonTouchUp(sender: AnyObject) {

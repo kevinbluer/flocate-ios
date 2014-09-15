@@ -18,8 +18,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var mapCurrentLocation: MKMapView!
     
     var manager:CLLocationManager!
-    var lat:String?
-    var lng:String?
+    var lat:Double?
+    var lng:Double?
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
@@ -42,7 +42,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         let arrayColors: Array <AnyObject> = [cor1, cor2]
         
         gradient.colors = arrayColors
-        //view.layer.insertSublayer(gradient, atIndex: 0)
+        view.layer.insertSublayer(gradient, atIndex: 0)
         
         
         // style the map
@@ -93,8 +93,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         var coord = locationObj.coordinate
         
         // set the lat & lng for future save
-        lat = "\(coord.latitude)"
-        lng = "\(coord.longitude)"
+        lat = coord.latitude
+        lng = coord.longitude
         
         var latDelta:CLLocationDegrees = 0.01
         var lngDelta:CLLocationDegrees = 0.01
@@ -183,54 +183,20 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         } else {
             
             // update the textbox
-            // saveLocationButton.titleLabel?.text = "Saving..."
-            // saveLocationButton.enabled = false
+            saveLocationButton.titleLabel?.text = "Saving..."
+            saveLocationButton.enabled = false
+
+            var location:PFGeoPoint = PFGeoPoint(latitude:lat!, longitude:lng!)
             
-//            // create the empty params dictionary
-//            var params = [:] as Dictionary
-//            
-//            // create the request object and set the url
-//            var request = NSMutableURLRequest(URL: NSURL(string: "http://api.bluer.com/checkin/save"))
-//            let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
-//            request.HTTPMethod = "POST"
-//            
-//            // add all the parameters
-//            var err: NSError?
-//            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            request.addValue("application/json", forHTTPHeaderField: "Accept")
-//            request.addValue(locationNote.text, forHTTPHeaderField: "message")
-//            request.addValue(locationDoing.text, forHTTPHeaderField: "doing")
-//            request.addValue(lat, forHTTPHeaderField: "lat")
-//            request.addValue(lng, forHTTPHeaderField: "lng")
-//    
-//            // setup the async task
-//            var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//                var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-//    
-//                // check for response error
-//                if(error != nil) {
-//                    println(error!.localizedDescription)
-//                }
-//                else {
-//                    // TODO show an improved success message
-//                    
-//                    // hide the keyboard
-//                    self.view.endEditing(true)
-//                    
-//                    // reset the values in the text fields
-//                    self.locationNote.text = ""
-//                    self.locationDoing.text = ""
-//                    
-//                    // change the values of the save button back
-//                    self.saveLocationButton.titleLabel?.text = "Save Location"
-//                    self.saveLocationButton.enabled = true
-//                }
-//            })
-//            
-//            // start the task
-//            task.resume()
+            var object = PFObject(className: "Checkin")
+            object.setObject(locationNote.text, forKey: "Note")
+            object.setObject(locationDoing.text, forKey: "Doing")
+            object.setObject(location, forKey: "Location")
+            object.saveInBackground()
             
+            // update the textbox
+            saveLocationButton.titleLabel?.text = "Add Your Footprint"
+            saveLocationButton.enabled = true
         }
     }
     
