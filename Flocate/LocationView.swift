@@ -25,6 +25,19 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
             firstLoad = false
         }
         
+        let rect : CGRect = CGRectMake(0,0,320,100)
+        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
+        let gradient : CAGradientLayer = CAGradientLayer()
+        gradient.frame = vista.bounds
+        
+        let cor1 = UIColor(hex:0xABCA8E).CGColor
+        let cor2 = UIColor(hex:0x7DA93D).CGColor
+        
+        let arrayColors: Array <AnyObject> = [cor1, cor2]
+        
+        gradient.colors = arrayColors
+        view.layer.insertSublayer(gradient, atIndex: 0)
+        
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
@@ -61,34 +74,61 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         self.items = []
         self.tableView.reloadData()
         
-        var request = NSMutableURLRequest(URL: NSURL(string: "http://api.bluer.com/checkin/get"))
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
-        request.HTTPMethod = "POST"
-        
-        var params = ["message":""] as Dictionary
-        
-        var err: NSError?
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            
-            let json = JSONValue(data)
-            
-            if let locationArray = json.array {
-                for location in locationArray {
+        var query = PFQuery(className:"Checkin")
+        query.whereKey("User", equalTo:PFUser.currentUser())
+        query.orderByDescending("createdAt")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                NSLog("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                
+                var counter:Int = 0
+                
+                for object in objects {
                     
-                    self.items += [location["message"].string!] // + " (" + location["date"].string! + ")"]
+                    self.items += [object["Note"] as String]
+                    
+                    self.tableView.reloadData()
+                    
                 }
+            } else {
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo!)
             }
-            
-            self.items = self.items.reverse()
-            
-            self.tableView.reloadData()
-        })
+        }
         
-        task.resume()
+        self.tableView.reloadData()
+        
+//        var request = NSMutableURLRequest(URL: NSURL(string: "http://api.bluer.com/checkin/get"))
+//        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
+//        request.HTTPMethod = "POST"
+//        
+//        var params = ["message":""] as Dictionary
+//        
+//        var err: NSError?
+//        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//        
+//        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//            
+//            let json = JSONValue(data)
+//            
+//            if let locationArray = json.array {
+//                for location in locationArray {
+//                    
+//                    self.items += [location["message"].string!] // + " (" + location["date"].string! + ")"]
+//                }
+//            }
+//            
+//            self.items = self.items.reverse()
+//            
+//            self.tableView.reloadData()
+//        })
+//        
+//        task.resume()
 
     }
 

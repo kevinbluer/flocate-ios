@@ -74,7 +74,7 @@ class LocationMapController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         var query = PFQuery(className:"Checkin")
-        query.whereKey("Note", equalTo:"chilling")
+        query.whereKey("User", equalTo:PFUser.currentUser())
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in

@@ -28,6 +28,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // TODO - determine the orientation (may need to handle orientation changes too)
         // Consider programmatically adding a constraint to the sublayer
         
@@ -43,7 +44,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         gradient.colors = arrayColors
         view.layer.insertSublayer(gradient, atIndex: 0)
-        
         
         // style the map
         mapCurrentLocation.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
@@ -78,6 +78,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         // see if the user exists, otherwish present the RegisterLogin ViewController
         if (username == nil) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewControllerWithIdentifier("signup") as UIViewController;
+            self.presentViewController(vc, animated: true, completion: nil);
+        }
+        
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            println(currentUser.objectId)
+        } else {
+            // Show the signup or login screen
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let vc = storyboard.instantiateViewControllerWithIdentifier("signup") as UIViewController;
             self.presentViewController(vc, animated: true, completion: nil);
@@ -188,11 +199,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
 
             var location:PFGeoPoint = PFGeoPoint(latitude:lat!, longitude:lng!)
             
-            var object = PFObject(className: "Checkin")
-            object.setObject(locationNote.text, forKey: "Note")
-            object.setObject(locationDoing.text, forKey: "Doing")
-            object.setObject(location, forKey: "Location")
-            object.saveInBackground()
+            var checkin = PFObject(className: "Checkin")
+            checkin.setObject(locationNote.text, forKey: "Note")
+            checkin.setObject(locationDoing.text, forKey: "Doing")
+            checkin.setObject(location, forKey: "Location")
+            
+            var relation = checkin.relationForKey("User")
+            relation.addObject(PFUser.currentUser())
+            
+            checkin.saveInBackground()
             
             // update the textbox
             saveLocationButton.titleLabel?.text = "Add Your Footprint"

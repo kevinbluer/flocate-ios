@@ -46,7 +46,7 @@ class FlocateSettings: UIViewController {
         
     }
     @IBAction func logoutButton(sender: AnyObject) {
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("Username")
+        PFUser.logOut()
     }
     
     override func didReceiveMemoryWarning() {

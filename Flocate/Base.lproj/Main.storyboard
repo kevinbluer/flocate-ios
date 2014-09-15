@@ -272,9 +272,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5W9-ob-LZD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="5W9-ob-LZD">
                                 <rect key="frame" x="0.0" y="44" width="600" height="507"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="t6l-0k-rNV">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -351,16 +353,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="953-paw-print-selected" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-tg-rLp">
                                 <rect key="frame" x="288" y="28" width="25" height="25"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MzP-lc-1ah">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MzP-lc-1ah">
                                 <rect key="frame" x="197" y="133" width="207" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-5n-7xI">
+                                <rect key="frame" x="197" y="285" width="207" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0L-qt-ICO">
+                                <rect key="frame" x="197" y="331" width="207" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-iq-A3h">
+                                <rect key="frame" x="197" y="375" width="207" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mI-pY-KkJ">
+                                <rect key="frame" x="197" y="422" width="207" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-XJ-m5l">
+                                <rect key="frame" x="197" y="470" width="207" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcB-Zf-yfp">
                                 <rect key="frame" x="197" y="180" width="207" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qw-ah-YMJ">
+                                <rect key="frame" x="272" y="508" width="57" height="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonRegisterTouchUp:" destination="b7z-bi-Fwi" eventType="touchUpInside" id="cNd-G9-9um"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -368,6 +405,12 @@
                             <constraint firstAttribute="centerX" secondItem="fnO-tg-rLp" secondAttribute="centerX" id="4zg-9S-u5D"/>
                             <constraint firstAttribute="centerX" secondItem="Mxk-GV-J9s" secondAttribute="centerX" id="7Ur-te-F9S"/>
                             <constraint firstAttribute="centerX" secondItem="n4p-kM-PMN" secondAttribute="centerX" id="HwD-lb-cWe"/>
+                            <constraint firstAttribute="centerX" secondItem="lKv-iq-A3h" secondAttribute="centerX" id="IMm-Zm-jvQ"/>
+                            <constraint firstAttribute="centerX" secondItem="0mI-pY-KkJ" secondAttribute="centerX" id="e2B-Cr-fHa"/>
+                            <constraint firstAttribute="centerX" secondItem="o0L-qt-ICO" secondAttribute="centerX" id="gjb-w8-8Bu"/>
+                            <constraint firstAttribute="centerX" secondItem="VfB-5n-7xI" secondAttribute="centerX" id="jfy-ZQ-qYz"/>
+                            <constraint firstAttribute="centerX" secondItem="4qw-ah-YMJ" secondAttribute="centerX" id="jpO-0f-5Bc"/>
+                            <constraint firstAttribute="centerX" secondItem="EvP-XJ-m5l" secondAttribute="centerX" id="mJh-oU-tvc"/>
                             <constraint firstAttribute="centerX" secondItem="MzP-lc-1ah" secondAttribute="centerX" id="rgC-Ag-2Oq"/>
                         </constraints>
                     </view>
@@ -376,6 +419,11 @@
                         <outlet property="registerLoginSegmentedControl" destination="n4p-kM-PMN" id="i0t-nU-gXL"/>
                         <outlet property="registerPassword" destination="GcB-Zf-yfp" id="Ian-LZ-OVU"/>
                         <outlet property="registerUsername" destination="MzP-lc-1ah" id="IEg-Qu-h8E"/>
+                        <outlet property="textEmail" destination="lKv-iq-A3h" id="hzl-qN-3HA"/>
+                        <outlet property="textFirstName" destination="VfB-5n-7xI" id="n5S-ss-gy7"/>
+                        <outlet property="textLastName" destination="o0L-qt-ICO" id="WMB-px-ipd"/>
+                        <outlet property="textPassword" destination="EvP-XJ-m5l" id="U6y-Ue-2rz"/>
+                        <outlet property="textUserName" destination="0mI-pY-KkJ" id="J1y-LX-JPF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NtF-yC-Yeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,6 +452,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-97" y="65"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Drc-bh-0vy">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wuj-aP-6fP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YyU-Ap-aF6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ehc-r1-Ses"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qad-Xz-a0O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOQ-PK-Lj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
