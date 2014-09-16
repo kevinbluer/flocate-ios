@@ -13,7 +13,7 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     @IBOutlet weak var tableView: UITableView!
     var firstLoad:Bool = true
     
-    var items: [String] = []
+    var items: [AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +45,26 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        var notes:UILabel = cell.viewWithTag(100) as UILabel
+        notes.text = self.items[indexPath.row]["Note"] as String?
+        
+        var doing:UILabel = cell.viewWithTag(99) as UILabel
+        
+        println(self.items[indexPath.row])
+        var date:NSDate = self.items[indexPath.row].createdAt as NSDate
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        
+        doing.text = dateFormatter.stringFromDate(date)
+        
+        // object["Note"] as String
+        
+        // cell.textLabel?.text = self.items[indexPath.row]
+        
+        
         
         return cell
     }
@@ -88,7 +105,7 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
                 
                 for object in objects {
                     
-                    self.items += [object["Note"] as String]
+                    self.items += [object]
                     
                     self.tableView.reloadData()
                     
