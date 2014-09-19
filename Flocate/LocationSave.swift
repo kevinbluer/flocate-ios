@@ -28,27 +28,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // TODO - determine the orientation (may need to handle orientation changes too)
-        // Consider programmatically adding a constraint to the sublayer
-        
-        let rect : CGRect = CGRectMake(0,0,320,100)
-        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
-        let gradient : CAGradientLayer = CAGradientLayer()
-        gradient.frame = vista.bounds
-        
-        let cor1 = UIColor(hex:0xABCA8E).CGColor
-        let cor2 = UIColor(hex:0x7DA93D).CGColor
-        
-        let arrayColors: Array <AnyObject> = [cor1, cor2]
-        
-        gradient.colors = arrayColors
-        view.layer.insertSublayer(gradient, atIndex: 0)
+        var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
+        view.insertSubview(vista, atIndex: 0)
         
         // style the map
         mapCurrentLocation.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
+        mapCurrentLocation.layer.cornerRadius = 5
         mapCurrentLocation.layer.borderWidth = 2
-        
         
         // set the title bars text to white
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)

@@ -26,8 +26,8 @@ class RegisterLoginViewController: UIViewController {
         
         // TODO - Make sure the rectangle covers the background
         
-        let rect : CGRect = CGRectMake(0,0,320,100)
-        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
+        let rect : CGRect = CGRectMake(0,0,0,0)
+        var vista : UIView = UIView(frame: rect)
         let gradient : CAGradientLayer = CAGradientLayer()
         gradient.frame = vista.bounds
         

@@ -21,7 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var clientKey:String! = "hCelAQwyyy9cwfE2nYzPDqUwdrN95G0xLpeaLG5T"
         Parse.setApplicationId(appId, clientKey: clientKey)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        
         return true
+    }
+    
+    func rotated()
+    {
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+        {
+            println("landscape")
+        }
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
+        {
+            println("portraight")
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication!) {
