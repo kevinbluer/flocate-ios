@@ -28,6 +28,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        saveLocationButton.layer.cornerRadius = 5
+        saveLocationButton.layer.borderWidth = 1
+        saveLocationButton.layer.borderColor = UIColor( red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0 ).CGColor
+        
         var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
         view.insertSubview(vista, atIndex: 0)
         

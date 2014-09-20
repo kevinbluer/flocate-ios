@@ -24,20 +24,8 @@ class RegisterLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        // TODO - Make sure the rectangle covers the background
-        
-        let rect : CGRect = CGRectMake(0,0,0,0)
-        var vista : UIView = UIView(frame: rect)
-        let gradient : CAGradientLayer = CAGradientLayer()
-        gradient.frame = vista.bounds
-        
-        let cor1 = UIColor(hex:0xABCA8E).CGColor
-        let cor2 = UIColor(hex:0x7DA93D).CGColor
-
-        let arrayColors: Array <AnyObject> = [cor1, cor2]
-        
-        gradient.colors = arrayColors
-        view.layer.insertSublayer(gradient, atIndex: 0)
+        var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
+        view.insertSubview(vista, atIndex: 0)
     }
     
     @IBAction func loginButtonTouchUp(sender: AnyObject) {

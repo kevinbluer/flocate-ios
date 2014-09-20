@@ -52,7 +52,6 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         
         var doing:UILabel = cell.viewWithTag(99) as UILabel
         
-        println(self.items[indexPath.row])
         var date:NSDate = self.items[indexPath.row].createdAt as NSDate
         
         var dateFormatter = NSDateFormatter()
@@ -117,35 +116,6 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         }
         
         self.tableView.reloadData()
-        
-//        var request = NSMutableURLRequest(URL: NSURL(string: "http://api.bluer.com/checkin/get"))
-//        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
-//        request.HTTPMethod = "POST"
-//        
-//        var params = ["message":""] as Dictionary
-//        
-//        var err: NSError?
-//        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.addValue("application/json", forHTTPHeaderField: "Accept")
-//        
-//        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//            
-//            let json = JSONValue(data)
-//            
-//            if let locationArray = json.array {
-//                for location in locationArray {
-//                    
-//                    self.items += [location["message"].string!] // + " (" + location["date"].string! + ")"]
-//                }
-//            }
-//            
-//            self.items = self.items.reverse()
-//            
-//            self.tableView.reloadData()
-//        })
-//        
-//        task.resume()
 
     }
 

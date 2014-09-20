@@ -13,34 +13,42 @@ class FlocateSettings: UIViewController {
     @IBOutlet weak var settingsFirstname: UILabel!
     @IBOutlet weak var settingsLastname: UILabel!
     @IBOutlet weak var settingsEmail: UILabel!
+    @IBOutlet weak var settingsPlacesCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rect : CGRect = CGRectMake(0,0,320,100)
-        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
-        let gradient : CAGradientLayer = CAGradientLayer()
-        gradient.frame = vista.bounds
+        var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
+        view.insertSubview(vista, atIndex: 0)
+
+        var currentUser = PFUser.currentUser()
         
-        let cor1 = UIColor(hex:0xABCA8E).CGColor
-        let cor2 = UIColor(hex:0x7DA93D).CGColor
+        settingsFirstname.text = currentUser.username
+        settingsLastname.text = currentUser.email
         
-        let arrayColors: Array <AnyObject> = [cor1, cor2]
+        var query = PFQuery(className:"Checkin")
+        query.whereKey("User", equalTo:PFUser.currentUser())
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                self.settingsPlacesCount.text = "You've recorded \(objects.count) places!"
+            }
+        }
         
-        gradient.colors = arrayColors
-        // view.layer.insertSublayer(gradient, atIndex: 0)
+//      
         
         
-        var dataDictionary: AnyObject? = nil;
-        var documentList = NSBundle.mainBundle().pathForResource("data", ofType:"plist")
-        dataDictionary = NSDictionary(contentsOfFile: documentList!)
-        println(" \(__FUNCTION__)Fetching 'data.plist 'file \n \(documentList) \n")
         
-        println(dataDictionary!["firstname"])
-        println(dataDictionary!["lastname"])
-        println(dataDictionary!["age"])
+//        var dataDictionary: AnyObject? = nil;
+//        var documentList = NSBundle.mainBundle().pathForResource("data", ofType:"plist")
+//        dataDictionary = NSDictionary(contentsOfFile: documentList!)
+//        println(" \(__FUNCTION__)Fetching 'data.plist 'file \n \(documentList) \n")
         
-        settingsFirstname.text = dataDictionary!["firstname"] as String
+//        println(dataDictionary!["firstname"])
+//        println(dataDictionary!["lastname"])
+//        println(dataDictionary!["age"])
+        
+        // settingsFirstname.text = dataDictionary!["firstname"] as String
         
         // var locations = Locations()
         
