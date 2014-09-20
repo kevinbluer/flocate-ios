@@ -60,9 +60,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        // TODO - determine if use is loggedin (NSUserDefaults)
-        // TODO - turn this into the dashboard screen
-        
         // attempt to get the username from NSUserDefaults
         var username: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("Username")
         

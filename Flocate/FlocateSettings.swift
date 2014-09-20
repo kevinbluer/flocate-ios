@@ -55,6 +55,9 @@ class FlocateSettings: UIViewController {
     }
     @IBAction func logoutButton(sender: AnyObject) {
         PFUser.logOut()
+        
+        // TODO - Also logout reset all of the other views
+        // TODO - Clear down all the NSUserDefaults too
     }
     
     override func didReceiveMemoryWarning() {

@@ -21,6 +21,8 @@ class RegisterLoginViewController: UIViewController {
     @IBOutlet weak var textEmail: UITextField!
     @IBOutlet weak var textUserName: UITextField!
     @IBOutlet weak var textPassword: UITextField!
+    @IBOutlet weak var viewLogin: UIView!
+    @IBOutlet weak var viewRegister: UIView!
     
     override func viewDidLoad() {
         
@@ -74,15 +76,15 @@ class RegisterLoginViewController: UIViewController {
     @IBAction func loginRegisterChanged(sender: AnyObject) {
         
         if registerLoginSegmentedControl.titleForSegmentAtIndex(registerLoginSegmentedControl.selectedSegmentIndex) == "Register" {
-            registerPassword.hidden = true
-            registerUsername.hidden = true
-            loginButton.hidden = true
+            
+            viewRegister.hidden = false
+            viewLogin.hidden = true
+            
             
         } else {
             
-            registerPassword.hidden = false
-            registerUsername.hidden = false
-            loginButton.hidden = false
+            viewRegister.hidden = true
+            viewLogin.hidden = false
         }
         
         

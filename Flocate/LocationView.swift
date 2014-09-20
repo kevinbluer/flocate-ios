@@ -25,19 +25,8 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
             firstLoad = false
         }
         
-        let rect : CGRect = CGRectMake(0,0,320,100)
-        var vista : UIView = UIView(frame: CGRectMake(0, 0, 320, 600))
-        let gradient : CAGradientLayer = CAGradientLayer()
-        gradient.frame = vista.bounds
-        
-        let cor1 = UIColor(hex:0xABCA8E).CGColor
-        let cor2 = UIColor(hex:0x7DA93D).CGColor
-        
-        let arrayColors: Array <AnyObject> = [cor1, cor2]
-        
-        gradient.colors = arrayColors
-        view.layer.insertSublayer(gradient, atIndex: 0)
-        
+        var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
+        view.insertSubview(vista, atIndex: 0)
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
