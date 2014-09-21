@@ -28,28 +28,30 @@ class RegisterLoginViewController: UIViewController {
         
         var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
         view.insertSubview(vista, atIndex: 0)
+        
+        viewRegister.hidden = true
     }
     
     @IBAction func loginButtonTouchUp(sender: AnyObject) {
         
-        // TODO - Get this value from the user
-        // TODO - Investigate OAuth strategy
+        if registerUsername.text != "" && registerPassword.text != "" {
         
-//        var myValue:NSString = "kevin"
-//        
-//        NSUserDefaults.standardUserDefaults().setObject(myValue, forKey:"Username")
-//        // NSUserDefaults.standardUserDefaults().synchronize()
-//        
-//        self.dismissViewControllerAnimated(true, completion: {})
-        
-        PFUser.logInWithUsernameInBackground(registerUsername.text, password:registerPassword.text) {
-            (user: PFUser!, error: NSError!) -> Void in
-            if user != nil {
-                self.dismissViewControllerAnimated(true, completion: {})
-            } else {
-                // The login failed. Check error to see why.
+            PFUser.logInWithUsernameInBackground(registerUsername.text, password:registerPassword.text) {
+                (user: PFUser!, error: NSError!) -> Void in
+                if user != nil {
+                    self.dismissViewControllerAnimated(true, completion: {})
+                } else {
+                    var alert = UIAlertController(title: "Username and Password", message: "Unable to log you in, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
             }
+        } else {
+            var alert = UIAlertController(title: "Username and Password", message: "Please enter a valid Username and Password", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
+        
     }
     
     

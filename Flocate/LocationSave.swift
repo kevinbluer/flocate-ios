@@ -16,6 +16,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var locationNote: UITextField!
     @IBOutlet weak var locationDoing: UITextField!
     @IBOutlet weak var mapCurrentLocation: MKMapView!
+    @IBOutlet weak var buttonCategoryWorld: UIButton!
+    @IBOutlet weak var scrollViewCategory: UIScrollView!
     
     var manager:CLLocationManager!
     var lat:Double?
@@ -26,6 +28,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     }
     
     override func viewDidLoad() {
+        
+        scrollViewCategory.contentSize = CGSizeMake(333, 42);
+        
         super.viewDidLoad()
         
         saveLocationButton.layer.cornerRadius = 5
@@ -56,6 +61,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         manager.startUpdatingLocation()
     }
+//    
+//    override func viewDidLayoutSubviews() {
+//        //self.scrollViewCategory.delegate = self
+//        scrollViewCategory.setContentOffset(CGPointMake(0,-50), animated: true)
+//    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -199,6 +209,16 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             // update the textbox
             saveLocationButton.titleLabel?.text = "Add Your Footprint"
             saveLocationButton.enabled = true
+        }
+    }
+    
+    @IBAction func buttonTouchUpCategoryWorld(sender: AnyObject) {
+        
+        // TODO it appears multiple buttons can be wired up to the same IBAction
+        // TODO check that "self" allows us to get at the actual element
+        
+        if true {
+            println("select")
         }
     }
     

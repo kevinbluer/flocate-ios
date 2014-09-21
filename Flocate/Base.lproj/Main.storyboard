@@ -28,25 +28,95 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-bs-8Uq">
-                                <rect key="frame" x="26" y="217" width="546" height="184"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Leave a footprint..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hho-0S-Qip">
-                                <rect key="frame" x="238" y="70" width="122" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="953-paw-print-selected" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-1O-8CH">
-                                <rect key="frame" x="288" y="28" width="25" height="25"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogq-sE-z7g">
-                                <rect key="frame" x="27" y="466" width="545" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LD-4m-cDk">
+                                <rect key="frame" x="26" y="206" width="546" height="42"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="va0-c8-4wD">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-b4-IPR">
+                                                <rect key="frame" x="8" y="7" width="28" height="28"/>
+                                                <state key="normal" image="815-car">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2wc-VK-nV1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-OD-tPo">
+                                                <rect key="frame" x="44" y="7" width="28" height="28"/>
+                                                <state key="normal" image="893-airplane">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iwu-44-c5z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KG-EU-l0a">
+                                                <rect key="frame" x="78" y="7" width="28" height="28"/>
+                                                <state key="normal" image="932-utensils">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="onV-FE-pjy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-jT-MOe">
+                                                <rect key="frame" x="116" y="7" width="28" height="28"/>
+                                                <state key="normal" image="995-martini-glass">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mzJ-Uy-2JR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyz-mZ-WNI">
+                                                <rect key="frame" x="147" y="7" width="28" height="28"/>
+                                                <state key="normal" image="957-beer-mug">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0r8-ae-iVY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-hl-8CX">
+                                                <rect key="frame" x="183" y="7" width="28" height="28"/>
+                                                <state key="normal" image="985-castle">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="IZA-cS-Nc0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-MP-Uu7">
+                                                <rect key="frame" x="214" y="7" width="28" height="28"/>
+                                                <state key="normal" image="952-shopping-cart">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fDo-0v-8sj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2u-Rm-tiF">
+                                                <rect key="frame" x="249" y="7" width="28" height="28"/>
+                                                <state key="normal" image="897-graduation-cap">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hS3-mS-a95"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogq-sE-z7g">
+                                <rect key="frame" x="27" y="486" width="545" height="30"/>
                                 <state key="normal" title="Add Your Footprint">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="151" y="260" width="98" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -56,6 +126,15 @@
                                     <action selector="saveLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="4Wn-Sf-r0x"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Leave a Footprint" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hho-0S-Qip">
+                                <rect key="frame" x="186" y="51" width="229" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-bs-8Uq">
+                                <rect key="frame" x="26" y="266" width="546" height="184"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -63,18 +142,17 @@
                             <constraint firstAttribute="centerX" secondItem="W5y-bs-8Uq" secondAttribute="centerX" id="6oO-dc-Qx7"/>
                             <constraint firstItem="Gpu-Xc-ZuN" firstAttribute="top" secondItem="hho-0S-Qip" secondAttribute="bottom" constant="27" id="Cva-wp-Iw8"/>
                             <constraint firstItem="Gpu-Xc-ZuN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="11" id="HA4-v1-ORn"/>
-                            <constraint firstItem="ogq-sE-z7g" firstAttribute="top" secondItem="W5y-bs-8Uq" secondAttribute="bottom" constant="25" id="Hhx-dX-Ww3"/>
                             <constraint firstAttribute="centerX" secondItem="ogq-sE-z7g" secondAttribute="centerX" id="KYI-Nq-pti"/>
+                            <constraint firstItem="2LD-4m-cDk" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="12" id="LnG-vk-LHq"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="leading" secondItem="Gpu-Xc-ZuN" secondAttribute="leading" id="Mct-Ya-Ouc"/>
                             <constraint firstAttribute="centerX" secondItem="hho-0S-Qip" secondAttribute="centerX" id="O6W-bd-JGA"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ogq-sE-z7g" secondAttribute="bottom" constant="35" id="PWo-Zj-bFf"/>
                             <constraint firstAttribute="centerX" secondItem="Gpu-Xc-ZuN" secondAttribute="centerX" id="Uen-ZO-WAS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2LD-4m-cDk" secondAttribute="trailing" constant="12" id="XdI-39-nG8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ogq-sE-z7g" secondAttribute="trailing" constant="12" id="Y16-hF-Ebe"/>
-                            <constraint firstItem="W5y-bs-8Uq" firstAttribute="top" secondItem="hlF-o4-nN2" secondAttribute="bottom" constant="25" id="YMV-gt-Xiq"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ogq-sE-z7g" secondAttribute="bottom" constant="55" id="a0a-EP-ni3"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="top" secondItem="Gpu-Xc-ZuN" secondAttribute="bottom" constant="17" id="eQa-7t-vda"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="trailing" secondItem="Gpu-Xc-ZuN" secondAttribute="trailing" id="gQj-Oc-i6y"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="leading" secondItem="W5y-bs-8Uq" secondAttribute="leading" id="ngG-XW-tT1"/>
-                            <constraint firstAttribute="centerX" secondItem="K1l-1O-8CH" secondAttribute="centerX" id="oET-zd-UMc"/>
                             <constraint firstItem="ogq-sE-z7g" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="12" id="spo-4l-eii"/>
                             <constraint firstItem="hlF-o4-nN2" firstAttribute="trailing" secondItem="W5y-bs-8Uq" secondAttribute="trailing" id="uHo-CL-b2R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gpu-Xc-ZuN" secondAttribute="trailing" constant="20" id="yqY-EC-Gj7"/>
@@ -82,10 +160,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="953-paw-print" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="buttonCategoryWorld" destination="ih3-b4-IPR" id="A6b-V1-s3C"/>
                         <outlet property="locationDoing" destination="hlF-o4-nN2" id="Lfb-Ej-idz"/>
                         <outlet property="locationNote" destination="Gpu-Xc-ZuN" id="LoZ-js-RWv"/>
                         <outlet property="mapCurrentLocation" destination="W5y-bs-8Uq" id="M7B-Vv-42g"/>
                         <outlet property="saveLocationButton" destination="ogq-sE-z7g" id="rUV-JP-Vf2"/>
+                        <outlet property="scrollViewCategory" destination="2LD-4m-cDk" id="gt4-cz-roS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -112,6 +192,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="162" y="169" width="76" height="21"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lastname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P9-sx-gSs">
                                 <rect key="frame" x="262" y="208" width="76" height="21"/>
@@ -124,6 +207,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="176" y="243" width="49" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="logoutButton:" destination="p2Z-cQ-mhN" eventType="touchUpInside" id="vyM-gU-4rG"/>
                                 </connections>
@@ -203,8 +289,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dST-PU-I0y">
-                                <rect key="frame" x="547" y="503" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dST-PU-I0y">
+                                <rect key="frame" x="539" y="498" width="45" height="45"/>
                                 <state key="normal" image="901-repeat">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
@@ -219,13 +305,13 @@
                             <constraint firstItem="uPQ-5a-lp1" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="6" id="6ZB-dA-uWB"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="asF-2D-HKc" secondAttribute="bottom" id="QXb-Lo-Mc8"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="dST-PU-I0y" secondAttribute="bottom" constant="20" id="RZ6-Rk-f3V"/>
+                            <constraint firstItem="dST-PU-I0y" firstAttribute="trailing" secondItem="nzi-oN-uiD" secondAttribute="trailingMargin" id="Tuc-a3-9p4"/>
                             <constraint firstItem="asF-2D-HKc" firstAttribute="top" secondItem="KbS-rh-skL" secondAttribute="bottom" constant="8" id="XDu-q5-5Fb"/>
                             <constraint firstItem="asF-2D-HKc" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="-17" id="a2H-h1-PzH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KbS-rh-skL" secondAttribute="trailing" constant="12" id="a5k-vQ-Njm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KbS-rh-skL" secondAttribute="trailing" constant="12" id="c74-ov-uc4"/>
                             <constraint firstAttribute="centerX" secondItem="geU-a8-mCi" secondAttribute="centerX" id="gdp-Hg-L6S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="asF-2D-HKc" secondAttribute="trailing" constant="-15" id="hUI-5j-4Gp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dST-PU-I0y" secondAttribute="trailing" constant="9" id="q7H-dV-pWE"/>
                             <constraint firstItem="geU-a8-mCi" firstAttribute="top" secondItem="nzi-oN-uiD" secondAttribute="topMargin" constant="18" id="s9M-0h-FB7"/>
                             <constraint firstItem="uPQ-5a-lp1" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="12" id="yCp-bm-eky"/>
                         </constraints>
@@ -302,6 +388,9 @@
                                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="88" width="400" height="463"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="K6q-nq-loG"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="RED-Gs-4V3"/>
@@ -311,6 +400,9 @@
                                 <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="44" width="400" height="44"/>
+                                </variation>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -364,7 +456,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="953-paw-print-selected" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-tg-rLp">
                                 <rect key="frame" x="288" y="28" width="25" height="25"/>
                             </imageView>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40K-6w-IEw">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40K-6w-IEw">
                                 <rect key="frame" x="150" y="300" width="300" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-5n-7xI">
@@ -435,7 +527,7 @@
                                     <constraint firstItem="MzP-lc-1ah" firstAttribute="top" secondItem="oFw-1n-c0a" secondAttribute="top" constant="24" id="Mxu-MG-k04"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Record your journey with virtual footprints on your next trip or around your home town." translatesAutoresizingMaskIntoConstraints="NO" id="tZR-As-clg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Record your journey with virtual footprints on your next trip or around your home town." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZR-As-clg">
                                 <rect key="frame" x="197" y="112" width="207" height="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -516,9 +608,17 @@
     <resources>
         <image name="1100-list-2" width="28" height="22"/>
         <image name="779-users" width="28" height="25"/>
+        <image name="815-car" width="28" height="25"/>
         <image name="852-map" width="28" height="24"/>
+        <image name="893-airplane" width="26" height="28"/>
+        <image name="897-graduation-cap" width="28" height="22"/>
         <image name="901-repeat" width="28" height="22"/>
+        <image name="932-utensils" width="20" height="28"/>
+        <image name="952-shopping-cart" width="28" height="20"/>
         <image name="953-paw-print" width="28" height="28"/>
         <image name="953-paw-print-selected" width="28" height="28"/>
+        <image name="957-beer-mug" width="22" height="28"/>
+        <image name="985-castle" width="18" height="28"/>
+        <image name="995-martini-glass" width="26" height="28"/>
     </resources>
 </document>

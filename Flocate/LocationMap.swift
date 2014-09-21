@@ -24,6 +24,7 @@ class LocationMapController: UIViewController {
         buttonRefresh.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
         buttonRefresh.layer.cornerRadius = 5
         buttonRefresh.layer.borderWidth = 1
+        buttonRefresh.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
         buttonRefresh.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
         
         refreshMap()
