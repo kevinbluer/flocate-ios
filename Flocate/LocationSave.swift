@@ -18,6 +18,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var mapCurrentLocation: MKMapView!
     @IBOutlet weak var buttonCategoryWorld: UIButton!
     @IBOutlet weak var scrollViewCategory: UIScrollView!
+    @IBOutlet weak var buttonCategoryCar: UIButton!
     
     var manager:CLLocationManager!
     var lat:Double?
@@ -28,6 +29,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     }
     
     override func viewDidLoad() {
+        
+        buttonCategoryCar.imageView?.image?.imageWithColor(UIColor.whiteColor())
         
         scrollViewCategory.contentSize = CGSizeMake(333, 42);
         

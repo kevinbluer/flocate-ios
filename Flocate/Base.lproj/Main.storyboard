@@ -98,7 +98,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2u-Rm-tiF">
-                                                <rect key="frame" x="249" y="7" width="28" height="28"/>
+                                                <rect key="frame" x="252" y="7" width="28" height="28"/>
                                                 <state key="normal" image="897-graduation-cap">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -106,8 +106,35 @@
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hS3-mS-a95"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkp-fv-1Rk">
+                                                <rect key="frame" x="286" y="7" width="28" height="28"/>
+                                                <state key="normal" image="1087-soccer-ball">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YJ1-VC-ijQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICW-XF-rYB">
+                                        <rect key="frame" x="323" y="6" width="28" height="28"/>
+                                        <state key="normal" image="1088-tennis-ball">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xd2-n1-FnH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvH-vx-Jrd">
+                                        <rect key="frame" x="359" y="6" width="28" height="28"/>
+                                        <state key="normal" image="1094-sail-boat-2">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7Ct-UO-T4D"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogq-sE-z7g">
@@ -158,8 +185,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Gpu-Xc-ZuN" secondAttribute="trailing" constant="20" id="yqY-EC-Gj7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" image="953-paw-print" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Add" image="947-target-reticle" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="buttonCategoryCar" destination="ih3-b4-IPR" id="iEm-9D-LaG"/>
                         <outlet property="buttonCategoryWorld" destination="ih3-b4-IPR" id="A6b-V1-s3C"/>
                         <outlet property="locationDoing" destination="hlF-o4-nN2" id="Lfb-Ej-idz"/>
                         <outlet property="locationNote" destination="Gpu-Xc-ZuN" id="LoZ-js-RWv"/>
@@ -379,6 +407,12 @@
                                                     <color key="textColor" red="0.80392163989999998" green="0.80392163989999998" blue="0.80392163989999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-Sn-xsU">
+                                                    <rect key="frame" x="20" y="15" width="26" height="28"/>
+                                                    <state key="normal" image="1053-pizza">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nzb-FQ-6hC" secondAttribute="trailing" constant="12" id="5sc-nb-QOf"/>
@@ -586,26 +620,12 @@
             </objects>
             <point key="canvasLocation" x="-97" y="65"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="03M-zA-png">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nKg-0x-tDl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="53p-rv-5yK"/>
-                        <viewControllerLayoutGuide type="bottom" id="wNT-QU-lQb"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UKX-Nd-EO9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CqX-uI-PFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
+        <image name="1053-pizza" width="26" height="28"/>
+        <image name="1087-soccer-ball" width="28" height="28"/>
+        <image name="1088-tennis-ball" width="28" height="28"/>
+        <image name="1094-sail-boat-2" width="28" height="28"/>
         <image name="1100-list-2" width="28" height="22"/>
         <image name="779-users" width="28" height="25"/>
         <image name="815-car" width="28" height="25"/>
@@ -614,8 +634,8 @@
         <image name="897-graduation-cap" width="28" height="22"/>
         <image name="901-repeat" width="28" height="22"/>
         <image name="932-utensils" width="20" height="28"/>
+        <image name="947-target-reticle" width="28" height="28"/>
         <image name="952-shopping-cart" width="28" height="20"/>
-        <image name="953-paw-print" width="28" height="28"/>
         <image name="953-paw-print-selected" width="28" height="28"/>
         <image name="957-beer-mug" width="22" height="28"/>
         <image name="985-castle" width="18" height="28"/>

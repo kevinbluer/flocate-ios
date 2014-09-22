@@ -22,7 +22,6 @@ class CustomTabBarController: UITabBarController {
                 item.image = image.imageWithColor(UIColor.whiteColor()).imageWithRenderingMode(.AlwaysOriginal)
             }
         }
-        
     }
     
 }
