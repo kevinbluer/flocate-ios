@@ -32,7 +32,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         buttonCategoryCar.imageView?.image?.imageWithColor(UIColor.whiteColor())
         
-        scrollViewCategory.contentSize = CGSizeMake(333, 42);
+        scrollViewCategory.contentSize = CGSizeMake(400, 42);
         
         super.viewDidLoad()
         

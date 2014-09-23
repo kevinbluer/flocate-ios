@@ -60,6 +60,8 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
         
+        println("yo")
+        
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil);
 //        let vc = storyboard.instantiateViewControllerWithIdentifier("xyz") as UIViewController;
 //        self.presentViewController(vc, animated: true, completion: nil);
@@ -107,6 +109,21 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         self.tableView.reloadData()
 
     }
+    
+    @IBAction func buttonViewLocationDetail(sender: AnyObject) {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "segueShowLocationDetail"{
+            let vc = segue.destinationViewController as LocationDetailViewController
+            vc.nameString = "hello"
+        }
+    }
 
+    @IBAction func unwindFromView(segue: UIStoryboardSegue) {
+        // note that data can be passed with an unwind action
+    }
+    
 }
 

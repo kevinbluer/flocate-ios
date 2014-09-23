@@ -10,6 +10,7 @@
 		23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7919A86B1100935E91 /* FlocateSettings.swift */; };
 		23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7D19A9F12C00935E91 /* RegisterLogin.swift */; };
 		232D907B19CC77D700B7639C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D907A19CC77D700B7639C /* BackgroundView.swift */; };
+		235E511B19D112B500447E21 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E511A19D112B500447E21 /* LocationDetailView.swift */; };
 		237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C3199F4EE300F2C856 /* AppDelegate.swift */; };
 		237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C5199F4EE300F2C856 /* LocationSave.swift */; };
 		237552C8199F4EE300F2C856 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552C7199F4EE300F2C856 /* LocationView.swift */; };
@@ -51,6 +52,7 @@
 		23222A7919A86B1100935E91 /* FlocateSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlocateSettings.swift; sourceTree = "<group>"; };
 		23222A7D19A9F12C00935E91 /* RegisterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterLogin.swift; sourceTree = "<group>"; };
 		232D907A19CC77D700B7639C /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		235E511A19D112B500447E21 /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		237552BE199F4EE300F2C856 /* Flocate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flocate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237552C2199F4EE300F2C856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237552C3199F4EE300F2C856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				237552C5199F4EE300F2C856 /* LocationSave.swift */,
 				23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */,
 				237552C7199F4EE300F2C856 /* LocationView.swift */,
+				235E511A19D112B500447E21 /* LocationDetailView.swift */,
 				23222A7919A86B1100935E91 /* FlocateSettings.swift */,
 				23FBA1E919A1D5CF00E95BC8 /* TabBarController.swift */,
 				237552C9199F4EE300F2C856 /* Main.storyboard */,
@@ -324,6 +327,7 @@
 			files = (
 				237552C8199F4EE300F2C856 /* LocationView.swift in Sources */,
 				237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */,
+				235E511B19D112B500447E21 /* LocationDetailView.swift in Sources */,
 				232D907B19CC77D700B7639C /* BackgroundView.swift in Sources */,
 				237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */,
 				23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */,
