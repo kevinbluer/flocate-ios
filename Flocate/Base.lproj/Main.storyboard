@@ -478,7 +478,7 @@
         <!--Location Detail View Controller-->
         <scene sceneID="tOp-0k-o1M">
             <objects>
-                <viewController id="DJD-EU-WWo" customClass="LocationDetailViewController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapDetail" id="DJD-EU-WWo" customClass="LocationDetailViewController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETK-M1-6FR"/>
                         <viewControllerLayoutGuide type="bottom" id="bP4-by-yM4"/>

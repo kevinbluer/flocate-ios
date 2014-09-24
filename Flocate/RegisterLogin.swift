@@ -39,8 +39,11 @@ class RegisterLoginViewController: UIViewController {
             PFUser.logInWithUsernameInBackground(registerUsername.text, password:registerPassword.text) {
                 (user: PFUser!, error: NSError!) -> Void in
                 if user != nil {
+                    NSUserDefaults.standardUserDefaults().setObject(user.username, forKey:"Username")
+                    
                     self.dismissViewControllerAnimated(true, completion: {})
                 } else {
+
                     var alert = UIAlertController(title: "Username and Password", message: "Unable to log you in, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)

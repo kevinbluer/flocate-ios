@@ -59,6 +59,10 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as UIViewController;
+        // vc.nameString = "Location Name"
+        self.presentViewController(vc, animated: true, completion: nil);
         
         println("yo")
         
