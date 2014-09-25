@@ -14,6 +14,7 @@ class LocationMapController: UIViewController {
     @IBOutlet weak var mapLocationsAll: MKMapView!
     @IBOutlet weak var labelLocation: UILabel!
     @IBOutlet weak var buttonRefresh: UIButton!
+    @IBOutlet weak var buttonZoomOut: UIButton!
     var locationArray:[AnyObject] = []
     var locationCounter:Int = 0
     var locationTotal:Int = 0
@@ -26,6 +27,12 @@ class LocationMapController: UIViewController {
         buttonRefresh.layer.borderWidth = 1
         buttonRefresh.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
         buttonRefresh.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
+        
+        buttonZoomOut.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
+        buttonZoomOut.layer.cornerRadius = 5
+        buttonZoomOut.layer.borderWidth = 1
+        buttonZoomOut.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        buttonZoomOut.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
         
         refreshMap()
     }
@@ -157,6 +164,7 @@ class LocationMapController: UIViewController {
     }
     
     @IBAction func buttonTouchUpRefresh(sender: AnyObject) {
+        locationCounter = 0
         refreshMap()
     }
     

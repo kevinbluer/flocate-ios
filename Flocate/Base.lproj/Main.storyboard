@@ -360,6 +360,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonRefresh" destination="dST-PU-I0y" id="0gt-is-GmF"/>
+                        <outlet property="buttonZoomOut" destination="Job-uU-yBc" id="5nF-u5-4h2"/>
                         <outlet property="labelLocation" destination="geU-a8-mCi" id="xM1-8Y-MjQ"/>
                         <outlet property="mapLocationsAll" destination="asF-2D-HKc" id="S83-Z0-Lyk"/>
                     </connections>
