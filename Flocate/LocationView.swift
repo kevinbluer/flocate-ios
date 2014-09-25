@@ -62,9 +62,8 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
         let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as UIViewController;
         // vc.nameString = "Location Name"
-        self.presentViewController(vc, animated: true, completion: nil);
         
-        println("yo")
+        self.presentViewController(vc, animated: true, completion: nil);
         
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil);
 //        let vc = storyboard.instantiateViewControllerWithIdentifier("xyz") as UIViewController;

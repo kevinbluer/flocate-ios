@@ -14,6 +14,9 @@ class LocationDetailViewController: UIViewController  {
     
     override func viewDidLoad() {
         labelLocationName.text = nameString
+        
+        var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
+        view.insertSubview(vista, atIndex: 0)
     }
     
 }

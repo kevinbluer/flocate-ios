@@ -327,14 +327,26 @@
                                     <action selector="buttonTouchUpRefresh:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="h5x-ru-Ho1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Job-uU-yBc">
+                                <rect key="frame" x="539" y="445" width="45" height="45"/>
+                                <state key="normal" image="715-globe">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTouchUpZoomOut:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="KeR-C0-U0j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Job-uU-yBc" firstAttribute="trailing" secondItem="nzi-oN-uiD" secondAttribute="trailingMargin" id="3QX-qG-opP"/>
                             <constraint firstItem="uPQ-5a-lp1" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="6" id="6ZB-dA-uWB"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="asF-2D-HKc" secondAttribute="bottom" id="QXb-Lo-Mc8"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="dST-PU-I0y" secondAttribute="bottom" constant="20" id="RZ6-Rk-f3V"/>
                             <constraint firstItem="dST-PU-I0y" firstAttribute="trailing" secondItem="nzi-oN-uiD" secondAttribute="trailingMargin" id="Tuc-a3-9p4"/>
                             <constraint firstItem="asF-2D-HKc" firstAttribute="top" secondItem="KbS-rh-skL" secondAttribute="bottom" constant="8" id="XDu-q5-5Fb"/>
+                            <constraint firstItem="dST-PU-I0y" firstAttribute="top" secondItem="Job-uU-yBc" secondAttribute="bottom" constant="8" id="Yq7-YH-0q5"/>
                             <constraint firstItem="asF-2D-HKc" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="-17" id="a2H-h1-PzH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KbS-rh-skL" secondAttribute="trailing" constant="12" id="a5k-vQ-Njm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KbS-rh-skL" secondAttribute="trailing" constant="12" id="c74-ov-uc4"/>
@@ -681,6 +693,7 @@
         <image name="1088-tennis-ball" width="28" height="28"/>
         <image name="1094-sail-boat-2" width="28" height="28"/>
         <image name="1100-list-2" width="28" height="22"/>
+        <image name="715-globe" width="28" height="28"/>
         <image name="779-users" width="28" height="25"/>
         <image name="815-car" width="28" height="25"/>
         <image name="852-map" width="28" height="24"/>
