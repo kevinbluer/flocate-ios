@@ -117,12 +117,12 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "segueShowLocationDetail"{
-            let vc = segue.destinationViewController as LocationDetailViewController
-            vc.nameString = "hello"
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if segue.identifier == "segueShowLocationDetail"{
+//            let vc = segue.destinationViewController as LocationDetailViewController
+//            vc.nameString = "hello"
+//        }
+//    }
 
     @IBAction func unwindFromView(segue: UIStoryboardSegue) {
         // note that data can be passed with an unwind action
