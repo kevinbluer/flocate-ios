@@ -61,7 +61,7 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
         let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as LocationDetailViewController;
-        vc.nameString = self.items[indexPath.row]["Note"] as String!
+        vc.entry = self.items[indexPath.row]
         
         self.presentViewController(vc, animated: true, completion: nil);
     }

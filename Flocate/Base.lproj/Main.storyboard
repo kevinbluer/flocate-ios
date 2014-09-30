@@ -509,8 +509,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JH-EV-VVn">
-                                <rect key="frame" x="277" y="519" width="40" height="30"/>
-                                <state key="normal" title="Close">
+                                <rect key="frame" x="27" y="519" width="546" height="30"/>
+                                <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -521,28 +521,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-b3-pqy">
                                 <rect key="frame" x="27" y="174" width="546" height="184"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-FY-nfl">
-                                <rect key="frame" x="277" y="473" width="40" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="w1x-b3-pqy" secondAttribute="centerX" id="3MQ-nL-L2f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1JH-EV-VVn" secondAttribute="trailing" constant="11" id="ITS-za-urX"/>
                             <constraint firstAttribute="centerX" secondItem="E1R-cf-VxR" secondAttribute="centerX" id="KXj-LY-PEq"/>
                             <constraint firstItem="w1x-b3-pqy" firstAttribute="leading" secondItem="OgK-h4-O32" secondAttribute="leadingMargin" constant="11" id="L2f-tF-nTd"/>
                             <constraint firstAttribute="centerX" secondItem="1JH-EV-VVn" secondAttribute="centerX" id="SyN-GR-eFx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w1x-b3-pqy" secondAttribute="trailing" constant="11" id="jnT-cV-8U8"/>
                             <constraint firstAttribute="centerX" secondItem="cfu-WD-0Nv" secondAttribute="centerX" id="lIb-xi-4DX"/>
+                            <constraint firstItem="1JH-EV-VVn" firstAttribute="leading" secondItem="OgK-h4-O32" secondAttribute="leadingMargin" constant="11" id="llv-HP-gdk"/>
                             <constraint firstAttribute="centerX" secondItem="1JH-EV-VVn" secondAttribute="centerX" id="w1U-Az-lk6"/>
                             <constraint firstAttribute="centerX" secondItem="chb-n7-vkg" secondAttribute="centerX" id="z8c-dU-qkn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonDone" destination="1JH-EV-VVn" id="ULs-Ns-8D8"/>
                         <outlet property="labelLocationName" destination="E1R-cf-VxR" id="OGR-8C-tbD"/>
+                        <outlet property="labelLocationWhat" destination="cfu-WD-0Nv" id="9dd-gx-5ib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9b-g6-RrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
