@@ -265,7 +265,7 @@
 						DevelopmentTeam = 6MWN5BMY3A;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
 								enabled = 0;

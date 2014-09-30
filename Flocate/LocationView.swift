@@ -60,14 +60,10 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as UIViewController;
-        // vc.nameString = "Location Name"
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as LocationDetailViewController;
+        vc.nameString = self.items[indexPath.row]["Note"] as String!
         
         self.presentViewController(vc, animated: true, completion: nil);
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-//        let vc = storyboard.instantiateViewControllerWithIdentifier("xyz") as UIViewController;
-//        self.presentViewController(vc, animated: true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {
