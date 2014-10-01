@@ -540,6 +540,7 @@
                         <outlet property="buttonDone" destination="1JH-EV-VVn" id="ULs-Ns-8D8"/>
                         <outlet property="labelLocationName" destination="E1R-cf-VxR" id="OGR-8C-tbD"/>
                         <outlet property="labelLocationWhat" destination="cfu-WD-0Nv" id="9dd-gx-5ib"/>
+                        <outlet property="mapLocation" destination="w1x-b3-pqy" id="MPa-Ai-Qe1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9b-g6-RrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
