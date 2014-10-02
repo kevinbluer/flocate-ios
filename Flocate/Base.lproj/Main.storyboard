@@ -21,12 +21,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where are you?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gpu-Xc-ZuN">
                                 <rect key="frame" x="27" y="114" width="546" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you up to?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlF-o4-nN2">
                                 <rect key="frame" x="27" y="162" width="546" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LD-4m-cDk">
                                 <rect key="frame" x="26" y="206" width="546" height="42"/>
@@ -245,6 +245,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've recorded ... places!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-5M-fXe">
                                 <rect key="frame" x="198" y="96" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Switch on Logging Every Hour / Day / Never" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
+                                <rect key="frame" x="131" y="289" width="339" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -508,8 +514,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-b3-pqy">
+                                <rect key="frame" x="27" y="174" width="546" height="184"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JH-EV-VVn">
-                                <rect key="frame" x="27" y="519" width="546" height="30"/>
+                                <rect key="frame" x="27" y="516" width="546" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -518,21 +527,17 @@
                                     <segue destination="tH0-kf-JDC" kind="unwind" unwindAction="unwindFromView:" id="Yte-nT-EOT"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-b3-pqy">
-                                <rect key="frame" x="27" y="174" width="546" height="184"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1JH-EV-VVn" secondAttribute="trailing" constant="11" id="2fK-zE-9eh"/>
                             <constraint firstAttribute="centerX" secondItem="w1x-b3-pqy" secondAttribute="centerX" id="3MQ-nL-L2f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1JH-EV-VVn" secondAttribute="trailing" constant="11" id="ITS-za-urX"/>
+                            <constraint firstItem="1JH-EV-VVn" firstAttribute="leading" secondItem="OgK-h4-O32" secondAttribute="leadingMargin" constant="11" id="KDq-ip-tOv"/>
                             <constraint firstAttribute="centerX" secondItem="E1R-cf-VxR" secondAttribute="centerX" id="KXj-LY-PEq"/>
                             <constraint firstItem="w1x-b3-pqy" firstAttribute="leading" secondItem="OgK-h4-O32" secondAttribute="leadingMargin" constant="11" id="L2f-tF-nTd"/>
                             <constraint firstAttribute="centerX" secondItem="1JH-EV-VVn" secondAttribute="centerX" id="SyN-GR-eFx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w1x-b3-pqy" secondAttribute="trailing" constant="11" id="jnT-cV-8U8"/>
                             <constraint firstAttribute="centerX" secondItem="cfu-WD-0Nv" secondAttribute="centerX" id="lIb-xi-4DX"/>
-                            <constraint firstItem="1JH-EV-VVn" firstAttribute="leading" secondItem="OgK-h4-O32" secondAttribute="leadingMargin" constant="11" id="llv-HP-gdk"/>
-                            <constraint firstAttribute="centerX" secondItem="1JH-EV-VVn" secondAttribute="centerX" id="w1U-Az-lk6"/>
                             <constraint firstAttribute="centerX" secondItem="chb-n7-vkg" secondAttribute="centerX" id="z8c-dU-qkn"/>
                         </constraints>
                     </view>
@@ -540,7 +545,7 @@
                         <outlet property="buttonDone" destination="1JH-EV-VVn" id="ULs-Ns-8D8"/>
                         <outlet property="labelLocationName" destination="E1R-cf-VxR" id="OGR-8C-tbD"/>
                         <outlet property="labelLocationWhat" destination="cfu-WD-0Nv" id="9dd-gx-5ib"/>
-                        <outlet property="mapLocation" destination="w1x-b3-pqy" id="MPa-Ai-Qe1"/>
+                        <outlet property="mapLocation" destination="w1x-b3-pqy" id="hIM-36-Sxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9b-g6-RrK" userLabel="First Responder" sceneMemberID="firstResponder"/>

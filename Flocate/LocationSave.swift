@@ -11,7 +11,7 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var saveLocationButton: UIButton!
     @IBOutlet weak var locationNote: UITextField!
     @IBOutlet weak var locationDoing: UITextField!
@@ -24,11 +24,16 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var lat:Double?
     var lng:Double?
     
+    var category:String = ""
+    
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
+        
+        locationNote.delegate = self
+        locationDoing.delegate = self
         
         buttonCategoryCar.imageView?.image?.imageWithColor(UIColor.whiteColor())
         
@@ -122,8 +127,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // add new annotation
         var pinLocation = MKPointAnnotation()
         pinLocation.coordinate = currentLocation
-        pinLocation.title = "You are here"
         self.mapCurrentLocation.addAnnotation(pinLocation)
+        
+        // get location name
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
+            if placemarks.count > 0 {
+                let pm = placemarks[0] as CLPlacemark
+                    self.locationNote.text = pm.subLocality + ", " + pm.locality
+                    println(pm.areasOfInterest)
+            } else {
+                println("Problem with the data received from geocoder")
+            }
+        })
     }
     
 
@@ -221,7 +236,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // TODO check that "self" allows us to get at the actual element
         
         if true {
-            println("select")
+            println(sender)
         }
     }
     
@@ -229,6 +244,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     func textFieldShouldReturn(textField: UITextField!) -> Bool
     {
         locationNote.resignFirstResponder()
+        locationDoing.resignFirstResponder()
         return true;
     }
 }
