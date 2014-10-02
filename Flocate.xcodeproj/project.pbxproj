@@ -17,6 +17,7 @@
 		237552CB199F4EE300F2C856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237552C9199F4EE300F2C856 /* Main.storyboard */; };
 		237552CD199F4EE300F2C856 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237552CC199F4EE300F2C856 /* Images.xcassets */; };
 		237552D9199F4EE300F2C856 /* FlocateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237552D8199F4EE300F2C856 /* FlocateTests.swift */; };
+		2389C9F519DCEFF800EEC5C3 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389C9F419DCEFF800EEC5C3 /* ArrayExtension.swift */; };
 		23908C5219AA1FC3007549BB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5119AA1FC3007549BB /* UIColorExtensions.swift */; };
 		23908C5419AB4EE7007549BB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23908C5319AB4EE7007549BB /* StringExtensions.swift */; };
 		23CA0B5519C5A6CC002C71F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0B5419C5A6CC002C71F0 /* CoreGraphics.framework */; };
@@ -63,6 +64,7 @@
 		237552D2199F4EE300F2C856 /* FlocateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlocateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237552D7199F4EE300F2C856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237552D8199F4EE300F2C856 /* FlocateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlocateTests.swift; sourceTree = "<group>"; };
+		2389C9F419DCEFF800EEC5C3 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Flocate/ArrayExtension.swift; sourceTree = "<group>"; };
 		23908C5119AA1FC3007549BB /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		23908C5319AB4EE7007549BB /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Flocate/StringExtensions.swift; sourceTree = "<group>"; };
 		23CA0B5419C5A6CC002C71F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */,
+				2389C9F419DCEFF800EEC5C3 /* ArrayExtension.swift */,
 				23908C5319AB4EE7007549BB /* StringExtensions.swift */,
 				23908C5119AA1FC3007549BB /* UIColorExtensions.swift */,
 				232D907A19CC77D700B7639C /* BackgroundView.swift */,
@@ -337,6 +340,7 @@
 				23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */,
 				23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */,
 				23908C5219AA1FC3007549BB /* UIColorExtensions.swift in Sources */,
+				2389C9F519DCEFF800EEC5C3 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

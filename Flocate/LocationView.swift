@@ -37,16 +37,18 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
-        notes.text = self.items[indexPath.row]["Note"] as String?
+        notes.text = self.items[indexPath.row]["Doing"] as String?
         
         var doing:UILabel = cell.viewWithTag(99) as UILabel
         
-        var date:NSDate = self.items[indexPath.row].createdAt as NSDate
+//        var date:NSDate = self.items[indexPath.row].createdAt as NSDate
+//        
+//        var dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "YYYY-MM-dd"
         
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd"
+        // doing.text = dateFormatter.stringFromDate(date)
         
-        doing.text = dateFormatter.stringFromDate(date)
+        doing.text = self.items[indexPath.row]["Note"] as String?
         
         // object["Note"] as String
         

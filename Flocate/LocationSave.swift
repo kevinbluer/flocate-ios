@@ -20,9 +20,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var scrollViewCategory: UIScrollView!
     @IBOutlet weak var buttonCategoryCar: UIButton!
     
+    var locationPopulated:Bool = false
     var manager:CLLocationManager!
     var lat:Double?
     var lng:Double?
+    var country:String?
+    var city:String?
+    var address:String?
     
     var category:String = ""
     
@@ -69,11 +73,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         manager.startUpdatingLocation()
     }
-//    
-//    override func viewDidLayoutSubviews() {
-//        //self.scrollViewCategory.delegate = self
-//        scrollViewCategory.setContentOffset(CGPointMake(0,-50), animated: true)
-//    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -133,8 +132,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
-                    self.locationNote.text = pm.subLocality + ", " + pm.locality
-                    println(pm.areasOfInterest)
+                
+                    if !self.locationPopulated {
+                        self.locationNote.text = pm.subLocality + ", " + pm.locality
+                        self.locationPopulated = true
+                    }
+                    self.country = pm.country
+                    self.city = pm.locality
+                
+                    // get the full address
+                    var addressLines = pm.addressDictionary["FormattedAddressLines"] as NSArray
+                    self.address = addressLines.combine(", ")
             } else {
                 println("Problem with the data received from geocoder")
             }
@@ -149,14 +157,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
 
     @IBAction func saveLocation(sender: AnyObject) {
         
-        println("saving location")
-        
         // check that we have the location first
         if (lat == nil && lng == nil) {
             
             if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
-                
-                println("UIAlertController can be instantiated")
                 
                 //make and use a UIAlertController
                 var alert = UIAlertController(title: "Location Unknown", message: "Flocate was unable to determine your location", preferredStyle: UIAlertControllerStyle.Alert)
@@ -166,18 +170,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             }
             else {
                 
-                println("UIAlertController can NOT be instantiated")
-                
                 // make and use a UIAlertView
                 let alert = UIAlertView()
-                alert.title = "Alert"
-                alert.message = "Here's a message"
-                alert.addButtonWithTitle("Understod")
+                alert.title = "Location Unknown"
+                alert.message = "Flocate was unable to determine your location"
+                alert.addButtonWithTitle("OK")
                 alert.show()
             }
-            
-            
-            
+        
             saveLocationButton.titleLabel?.text = "Save Location"
             saveLocationButton.enabled = true
         
@@ -185,8 +185,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         } else if (locationNote.text == "") {
             
             if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
-                
-                println("UIAlertController can be instantiated")
                 
                 //make and use a UIAlertController
                 var alert = UIAlertController(title: "Enter Name", message: "Please enter a place name", preferredStyle: UIAlertControllerStyle.Alert)
@@ -218,11 +216,34 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             checkin.setObject(locationNote.text, forKey: "Note")
             checkin.setObject(locationDoing.text, forKey: "Doing")
             checkin.setObject(location, forKey: "Location")
+            checkin.setObject(city, forKey: "City")
+            checkin.setObject(country, forKey: "Country")
+            checkin.setObject(address, forKey: "Address")
             
             var relation = checkin.relationForKey("User")
             relation.addObject(PFUser.currentUser())
             
-            checkin.saveInBackground()
+            checkin.saveEventually()
+            
+            if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+                
+                //make and use a UIAlertController
+                var alert = UIAlertController(title: "Footprint Added", message: "Your footprint was successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                println("UIAlertController can NOT be instantiated")
+                
+                // make and use a UIAlertView
+                let alert = UIAlertView()
+                alert.title = "Footprint Added"
+                alert.message = "Your footprint was successfully saved"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
             
             // update the textbox
             saveLocationButton.titleLabel?.text = "Add Your Footprint"
