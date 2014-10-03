@@ -249,7 +249,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Switch on Logging Every Hour / Day / Never" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Switch on Logging Every Hour / Day / Never" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
                                 <rect key="frame" x="131" y="289" width="339" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -260,6 +260,7 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="zQ1-X5-BpI" secondAttribute="centerX" id="9r9-x9-1Qv"/>
                             <constraint firstAttribute="centerX" secondItem="OUr-C2-bD1" secondAttribute="centerX" id="HDP-WO-Iux"/>
+                            <constraint firstAttribute="centerX" secondItem="efa-hA-dAK" secondAttribute="centerX" id="Hoa-JH-AwX"/>
                             <constraint firstAttribute="centerX" secondItem="8Cr-5M-fXe" secondAttribute="centerX" id="jka-yZ-VDw"/>
                             <constraint firstAttribute="centerX" secondItem="Zcs-ae-sni" secondAttribute="centerX" id="kr4-ot-NaO"/>
                             <constraint firstAttribute="centerX" secondItem="4P9-sx-gSs" secondAttribute="centerX" id="nBZ-Ze-l1c"/>
@@ -319,24 +320,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geU-a8-mCi">
-                                <rect key="frame" x="293" y="18" width="15" height="21"/>
+                                <rect key="frame" x="293.5" y="18" width="14.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dST-PU-I0y">
-                                <rect key="frame" x="539" y="498" width="45" height="45"/>
-                                <state key="normal" image="901-repeat">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTouchUpRefresh:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="h5x-ru-Ho1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Job-uU-yBc">
                                 <rect key="frame" x="539" y="445" width="45" height="45"/>
-                                <state key="normal" image="715-globe">
+                                <state key="normal" image="737-zoom-out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
@@ -344,10 +335,32 @@
                                     <action selector="buttonTouchUpZoomOut:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="KeR-C0-U0j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-W8-BXY">
+                                <rect key="frame" x="538" y="392" width="45" height="45"/>
+                                <state key="normal" image="736-zoom-in">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTouchUpZoomIn:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="FgW-cO-Fi7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dST-PU-I0y">
+                                <rect key="frame" x="539" y="498" width="45" height="45"/>
+                                <state key="normal" image="723-location-arrow">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTouchUpRefresh:" destination="4Ko-IW-dUo" eventType="touchUpInside" id="h5x-ru-Ho1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9qV-W8-BXY" secondAttribute="trailing" id="2vv-Y4-ErF"/>
                             <constraint firstItem="Job-uU-yBc" firstAttribute="trailing" secondItem="nzi-oN-uiD" secondAttribute="trailingMargin" id="3QX-qG-opP"/>
+                            <constraint firstItem="Job-uU-yBc" firstAttribute="top" secondItem="9qV-W8-BXY" secondAttribute="bottom" constant="8" id="60j-gA-5Qu"/>
                             <constraint firstItem="uPQ-5a-lp1" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="6" id="6ZB-dA-uWB"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="asF-2D-HKc" secondAttribute="bottom" id="QXb-Lo-Mc8"/>
                             <constraint firstItem="KNv-t1-7tf" firstAttribute="top" secondItem="dST-PU-I0y" secondAttribute="bottom" constant="20" id="RZ6-Rk-f3V"/>
@@ -367,6 +380,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonRefresh" destination="dST-PU-I0y" id="0gt-is-GmF"/>
+                        <outlet property="buttonZoomIn" destination="9qV-W8-BXY" id="hPg-he-lat"/>
                         <outlet property="buttonZoomOut" destination="Job-uU-yBc" id="5nF-u5-4h2"/>
                         <outlet property="labelLocation" destination="geU-a8-mCi" id="xM1-8Y-MjQ"/>
                         <outlet property="mapLocationsAll" destination="asF-2D-HKc" id="S83-Z0-Lyk"/>
@@ -395,7 +409,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Your Places" id="r2k-Hx-vWM">
-                                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="AuV-MM-hHC">
+                                        <barButtonItem key="leftBarButtonItem" image="901-repeat" id="AuV-MM-hHC">
                                             <connections>
                                                 <action selector="clickLoadLatest:" destination="8rJ-Kc-sve" id="P0l-cB-ceV"/>
                                             </connections>
@@ -416,8 +430,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem Ipsum" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKy-xt-n69">
-                                                    <rect key="frame" x="62" y="8" width="519" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <rect key="frame" x="62" y="9" width="519" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -718,7 +732,9 @@
         <image name="1088-tennis-ball" width="28" height="28"/>
         <image name="1094-sail-boat-2" width="28" height="28"/>
         <image name="1100-list-2" width="28" height="22"/>
-        <image name="715-globe" width="28" height="28"/>
+        <image name="723-location-arrow" width="28" height="28"/>
+        <image name="736-zoom-in" width="28" height="28"/>
+        <image name="737-zoom-out" width="28" height="28"/>
         <image name="779-users" width="28" height="25"/>
         <image name="815-car" width="28" height="25"/>
         <image name="852-map" width="28" height="24"/>

@@ -15,9 +15,11 @@ class LocationMapController: UIViewController {
     @IBOutlet weak var labelLocation: UILabel!
     @IBOutlet weak var buttonRefresh: UIButton!
     @IBOutlet weak var buttonZoomOut: UIButton!
+    @IBOutlet weak var buttonZoomIn: UIButton!
     var locationArray:[AnyObject] = []
     var locationCounter:Int = 0
     var locationTotal:Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +27,20 @@ class LocationMapController: UIViewController {
         buttonRefresh.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
         buttonRefresh.layer.cornerRadius = 5
         buttonRefresh.layer.borderWidth = 1
-        buttonRefresh.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        buttonRefresh.contentEdgeInsets = UIEdgeInsetsMake(6, 6, 6, 6)
         buttonRefresh.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
         
         buttonZoomOut.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
         buttonZoomOut.layer.cornerRadius = 5
         buttonZoomOut.layer.borderWidth = 1
-        buttonZoomOut.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        buttonZoomOut.contentEdgeInsets = UIEdgeInsetsMake(6, 6, 6, 6)
         buttonZoomOut.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
+        
+        buttonZoomIn.layer.borderColor = UIColor(hex:0xFFFFFF).CGColor
+        buttonZoomIn.layer.cornerRadius = 5
+        buttonZoomIn.layer.borderWidth = 1
+        buttonZoomIn.contentEdgeInsets = UIEdgeInsetsMake(6, 6, 6, 6)
+        buttonZoomIn.layer.backgroundColor = UIColor(hex:0x7DA93D).CGColor
         
         refreshMap()
     }
@@ -155,6 +163,12 @@ class LocationMapController: UIViewController {
         
     }
     
+    @IBAction func buttonTouchUpZoomIn(sender: AnyObject) {
+        var currentRegion = mapLocationsAll.region
+        currentRegion.span.latitudeDelta = 0.01
+        currentRegion.span.longitudeDelta = 0.01
+        self.mapLocationsAll.setRegion(currentRegion, animated: true)
+    }
     
     @IBAction func buttonTouchUpZoomOut(sender: AnyObject) {
         var currentRegion = mapLocationsAll.region

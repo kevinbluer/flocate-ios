@@ -248,6 +248,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             // update the textbox
             saveLocationButton.titleLabel?.text = "Add Your Footprint"
             saveLocationButton.enabled = true
+            
+            // reset the textboxes
+            locationNote.text = ""
+            locationDoing.text = ""
         }
     }
     
