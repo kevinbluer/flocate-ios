@@ -158,8 +158,8 @@ class LocationMapController: UIViewController {
     
     @IBAction func buttonTouchUpZoomOut(sender: AnyObject) {
         var currentRegion = mapLocationsAll.region
-        currentRegion.span.latitudeDelta = 20
-        currentRegion.span.longitudeDelta = 20
+        currentRegion.span.latitudeDelta = 100
+        currentRegion.span.longitudeDelta = 100
         self.mapLocationsAll.setRegion(currentRegion, animated: true)
     }
     

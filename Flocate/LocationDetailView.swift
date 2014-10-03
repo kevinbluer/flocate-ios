@@ -16,7 +16,6 @@ class LocationDetailViewController: UIViewController  {
     @IBOutlet weak var buttonDone: UIButton!
     @IBOutlet weak var mapLocation: MKMapView!
     var entry:AnyObject = ""
-   
     
     override func viewDidLoad() {
         
@@ -48,10 +47,28 @@ class LocationDetailViewController: UIViewController  {
         // pinLocation.title = entry["Doing"] as String
         self.mapLocation.addAnnotation(pinLocation)
 
-        var span = MKCoordinateSpanMake(0.01, 0.01)
+        var span = MKCoordinateSpanMake(0.02, 0.02)
         var region = MKCoordinateRegion(center: location, span: span)
         self.mapLocation.setRegion(region, animated: true)
         self.mapLocation.selectAnnotation(pinLocation, animated: true)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        var geopoint:PFGeoPoint = entry["Location"] as PFGeoPoint!
+        
+        var location = CLLocationCoordinate2D(
+            latitude: geopoint.latitude,
+            longitude: geopoint.longitude
+        )
+        
+        var cam:MKMapCamera = MKMapCamera()
+        cam.centerCoordinate = location
+        cam.heading = 0
+        cam.pitch = 60
+        cam.altitude = 400
+        
+        self.mapLocation.setCamera(cam, animated: true)
     }
     
 }

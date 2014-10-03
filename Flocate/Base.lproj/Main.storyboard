@@ -409,7 +409,7 @@
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
                                 <prototypes>
-                                    <tableViewCell tag="110" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvcItems" rowHeight="60" id="t6l-0k-rNV">
+                                    <tableViewCell opaque="NO" tag="110" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvcItems" rowHeight="60" id="t6l-0k-rNV">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6l-0k-rNV" id="NFY-hr-EVS">
@@ -449,9 +449,10 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="RED-Gs-4V3"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-bO-FyZ">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Search Your Places" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-bO-FyZ">
                                 <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="44" width="400" height="44"/>
@@ -475,6 +476,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Places" image="1100-list-2" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="addressBar" destination="1Uw-bO-FyZ" id="KFR-Z8-Rrw"/>
                         <outlet property="loadLatest" destination="AuV-MM-hHC" id="wLa-zF-aF7"/>
                         <outlet property="tableView" destination="5W9-ob-LZD" id="zBF-Zj-YUl"/>
                     </connections>

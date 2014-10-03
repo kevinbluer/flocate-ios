@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate  {
+class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate  {
     @IBOutlet weak var loadLatest: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var firstLoad:Bool = true
+    @IBOutlet weak var tableViewCell: UITableViewCell!
+    @IBOutlet weak var addressBar: UISearchBar!
     
     var items: [AnyObject] = []
     
@@ -21,9 +23,11 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         if firstLoad {
-            populateTable()
+            populateTable("")
             firstLoad = false
         }
+        
+        addressBar.delegate = self
         
         var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
         view.insertSubview(vista, atIndex: 0)
@@ -33,8 +37,40 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
         return self.items.count;
     }
     
+    func searchBarSearchButtonClicked( searchBar: UISearchBar!)
+    {
+        if (addressBar.text == "") {
+            populateTable("")
+        } else {
+            populateTable(addressBar.text)
+        }
+    }
+    
+    func searchBarTextDidBeginEditing( searchBar: UISearchBar!) {
+        if (addressBar.text == "") {
+            populateTable("")
+        } else {
+            populateTable(addressBar.text)
+        }
+    }
+    
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
+        
+//        let rect : CGRect = CGRectMake(0,0,0,0)
+//        var vista : UIView = UIView(frame: rect)
+//        let gradient : CAGradientLayer = CAGradientLayer()
+//        gradient.frame = vista.bounds
+//        
+//        let cor1 = UIColor(hex:0xABCA8E).CGColor
+//        let cor2 = UIColor(hex:0x7DA93D).CGColor
+//
+//        let arrayColors: Array <AnyObject> = [cor1, cor2]
+//        
+//        gradient.colors = arrayColors
+//        tableViewCell.layer.insertSublayer(gradient, atIndex: 0)
+        
+        
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
         notes.text = self.items[indexPath.row]["Doing"] as String?
@@ -75,16 +111,22 @@ class SecondViewController: UIViewController, UITableViewDelegate  {
 
     @IBAction func clickLoadLatest(sender: AnyObject) {
         
-        populateTable()
+        populateTable("")
     }
     
-    func populateTable() {
+    func populateTable(filter: String) {
         self.items = []
         self.tableView.reloadData()
         
         var query = PFQuery(className:"Checkin")
+        
         query.whereKey("User", equalTo:PFUser.currentUser())
         query.orderByDescending("createdAt")
+        
+        if filter != "" {
+            query.whereKey("Address", containsString: addressBar.text)
+        }
+        
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
