@@ -17,9 +17,36 @@ class LocationDetailViewController: UIViewController  {
     @IBOutlet weak var mapLocation: MKMapView!
     var entry:AnyObject = ""
     
+    func daysBetweenDate(fromDateTime:NSDate, toDateTime:NSDate) -> Int {
+        
+        let cal = NSCalendar.currentCalendar()
+        let unit:NSCalendarUnit = .DayCalendarUnit
+        
+        let components = cal.components(unit, fromDate: fromDateTime, toDate: toDateTime, options: nil)
+        
+        return components.day
+    }
+    
     override func viewDidLoad() {
         
-        labelLocationName.text = "3 days ago"
+        var days:Int = daysBetweenDate(entry.createdAt, toDateTime:NSDate.date())
+        
+        var message:String = ""
+        
+        switch (days) {
+            case 0:
+                message = "Today"
+                break;
+            case 1:
+                message = "Yesterday"
+                break;
+            default:
+                message = "\(days) days ago"
+                break;
+        }
+        
+        labelLocationName.text = message
+        
         labelLocationWhat.text = entry["Note"] as String!
         labelLocationWhere.text = entry["Doing"] as String!
         

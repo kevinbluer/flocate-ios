@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231C59FA19DFC90000F828CB /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C59F919DFC90000F828CB /* NSDate.swift */; };
 		23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7919A86B1100935E91 /* FlocateSettings.swift */; };
 		23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23222A7D19A9F12C00935E91 /* RegisterLogin.swift */; };
 		232D907B19CC77D700B7639C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D907A19CC77D700B7639C /* BackgroundView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231C59F919DFC90000F828CB /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Flocate/NSDate.swift; sourceTree = "<group>"; };
 		23222A7919A86B1100935E91 /* FlocateSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlocateSettings.swift; sourceTree = "<group>"; };
 		23222A7D19A9F12C00935E91 /* RegisterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterLogin.swift; sourceTree = "<group>"; };
 		232D907A19CC77D700B7639C /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		23FBA1E819A19B2E00E95BC8 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				231C59F919DFC90000F828CB /* NSDate.swift */,
 				23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */,
 				2389C9F419DCEFF800EEC5C3 /* ArrayExtension.swift */,
 				23908C5319AB4EE7007549BB /* StringExtensions.swift */,
@@ -332,6 +335,7 @@
 				237552C4199F4EE300F2C856 /* AppDelegate.swift in Sources */,
 				235E511B19D112B500447E21 /* LocationDetailView.swift in Sources */,
 				232D907B19CC77D700B7639C /* BackgroundView.swift in Sources */,
+				231C59FA19DFC90000F828CB /* NSDate.swift in Sources */,
 				237552C6199F4EE300F2C856 /* LocationSave.swift in Sources */,
 				23FBA1EA19A1D5CF00E95BC8 /* TabBarController.swift in Sources */,
 				23222A7E19A9F12C00935E91 /* RegisterLogin.swift in Sources */,
