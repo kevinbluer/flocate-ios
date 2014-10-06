@@ -204,6 +204,28 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                 alert.show()
             }
             
+        } else if {
+            
+            if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
+                
+                //make and use a UIAlertController
+                var alert = UIAlertController(title: "Enter Activity", message: "Please enter what you're up to", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
+            else {
+                
+                println("UIAlertController can NOT be instantiated")
+                
+                // make and use a UIAlertView
+                let alert = UIAlertView()
+                alert.title = "Enter Activity"
+                alert.message = "Please enter what you're up to"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
+            
         } else {
             
             // update the textbox
