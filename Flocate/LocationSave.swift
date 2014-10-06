@@ -283,7 +283,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // TODO check that "self" allows us to get at the actual element
         
         if true {
-            println(sender)
+            var button:UIButton = sender as UIButton
+            println(sender.tag)
+            // sender.setSelected(true, animated: false)
         }
     }
     
