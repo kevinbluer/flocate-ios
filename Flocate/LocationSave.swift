@@ -204,7 +204,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                 alert.show()
             }
             
-        } else if {
+        } else if (locationDoing.text == "") {
             
             if let gotModernAlert: AnyClass = NSClassFromString("UIAlertController") {
                 
