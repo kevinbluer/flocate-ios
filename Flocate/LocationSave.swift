@@ -277,16 +277,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         }
     }
     
-    @IBAction func buttonTouchUpCategoryWorld(sender: AnyObject) {
+    @IBAction func buttonTouchUpCategoryWorld(sender: UIButton) {
         
-        // TODO it appears multiple buttons can be wired up to the same IBAction
-        // TODO check that "self" allows us to get at the actual element
+        // TODO rename this function
+        // TODO put the icons in a 2 row grid
         
-        if true {
-            var button:UIButton = sender as UIButton
-            println(sender.tag)
-            // sender.setSelected(true, animated: false)
-        }
+        // var button:UIButton = sender as UIButton
+        println(sender.tag)
+        sender.selected = !sender.selected
     }
     
     // hide the keyboard when the user presses return
