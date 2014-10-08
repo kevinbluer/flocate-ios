@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -34,7 +33,7 @@
                                                 <state key="normal" image="815-car">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="1053-pizza"/>
+                                                <state key="selected" image="815-car-selected"/>
                                                 <state key="highlighted" image="1053-pizza"/>
                                                 <connections>
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2wc-VK-nV1"/>
@@ -45,7 +44,7 @@
                                                 <state key="normal" image="893-airplane">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" image="1053-pizza"/>
+                                                <state key="selected" image="893-airplane-selected"/>
                                                 <state key="highlighted" image="1053-pizza"/>
                                                 <connections>
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iwu-44-c5z"/>
@@ -56,6 +55,7 @@
                                                 <state key="normal" image="932-utensils">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected" image="932-utensils-selected"/>
                                                 <connections>
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="onV-FE-pjy"/>
                                                 </connections>
@@ -195,6 +195,8 @@
                     <tabBarItem key="tabBarItem" title="Add" image="947-target-reticle" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="buttonCategoryCar" destination="ih3-b4-IPR" id="iEm-9D-LaG"/>
+                        <outlet property="buttonCategoryMeal" destination="0KG-EU-l0a" id="hwt-cS-JYB"/>
+                        <outlet property="buttonCategoryPlane" destination="4eg-OD-tPo" id="hMD-cx-j07"/>
                         <outlet property="buttonCategoryWorld" destination="ih3-b4-IPR" id="A6b-V1-s3C"/>
                         <outlet property="locationDoing" destination="hlF-o4-nN2" id="Lfb-Ej-idz"/>
                         <outlet property="locationNote" destination="Gpu-Xc-ZuN" id="LoZ-js-RWv"/>
@@ -745,11 +747,14 @@
         <image name="737-zoom-out" width="28" height="28"/>
         <image name="779-users" width="28" height="25"/>
         <image name="815-car" width="28" height="25"/>
+        <image name="815-car-selected" width="28" height="25"/>
         <image name="852-map" width="28" height="24"/>
         <image name="893-airplane" width="26" height="28"/>
+        <image name="893-airplane-selected" width="26" height="28"/>
         <image name="897-graduation-cap" width="28" height="22"/>
         <image name="901-repeat" width="28" height="22"/>
         <image name="932-utensils" width="20" height="28"/>
+        <image name="932-utensils-selected" width="20" height="28"/>
         <image name="945-radar" width="28" height="28"/>
         <image name="947-target-reticle" width="28" height="28"/>
         <image name="952-shopping-cart" width="28" height="20"/>

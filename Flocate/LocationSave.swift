@@ -19,6 +19,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var buttonCategoryWorld: UIButton!
     @IBOutlet weak var scrollViewCategory: UIScrollView!
     @IBOutlet weak var buttonCategoryCar: UIButton!
+    @IBOutlet weak var buttonCategoryPlane: UIButton!
+    @IBOutlet weak var buttonCategoryMeal: UIButton!
     
     var locationPopulated:Bool = false
     var manager:CLLocationManager!
@@ -282,8 +284,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // TODO rename this function
         // TODO put the icons in a 2 row grid
         
-        // var button:UIButton = sender as UIButton
-        println(sender.tag)
+        // TODO - deselect all of them, THEN select the 'sent' one
+        // slight clunky, but works for now
+        
+        buttonCategoryCar.selected = false
+        buttonCategoryPlane.selected = false
+        buttonCategoryMeal.selected = false
+        
         sender.selected = !sender.selected
     }
     
