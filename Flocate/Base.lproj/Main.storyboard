@@ -535,6 +535,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUL-jP-CrC">
+                                <rect key="frame" x="27" y="331" width="546" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-WD-0Nv">
                                 <rect key="frame" x="27" y="70" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -554,6 +560,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-b3-pqy">
                                 <rect key="frame" x="27" y="139" width="546" height="184"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MC-Dd-BkK">
+                                <rect key="frame" x="27" y="360" width="546" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -572,6 +584,8 @@
                     </view>
                     <connections>
                         <outlet property="buttonDone" destination="1JH-EV-VVn" id="ULs-Ns-8D8"/>
+                        <outlet property="labelLocationAddress" destination="GUL-jP-CrC" id="mwj-AZ-Kk0"/>
+                        <outlet property="labelLocationDetailedDate" destination="6MC-Dd-BkK" id="luk-De-S8m"/>
                         <outlet property="labelLocationName" destination="E1R-cf-VxR" id="OGR-8C-tbD"/>
                         <outlet property="labelLocationWhat" destination="cfu-WD-0Nv" id="9dd-gx-5ib"/>
                         <outlet property="labelLocationWhere" destination="chb-n7-vkg" id="L1Q-8y-Gsj"/>

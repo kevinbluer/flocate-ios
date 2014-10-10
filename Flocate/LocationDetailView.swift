@@ -16,6 +16,8 @@ class LocationDetailViewController: UIViewController  {
     @IBOutlet weak var buttonDone: UIButton!
     @IBOutlet weak var mapLocation: MKMapView!
     var entry:AnyObject = ""
+    @IBOutlet weak var labelLocationAddress: UILabel!
+    @IBOutlet weak var labelLocationDetailedDate: UILabel!
     
     func daysBetweenDate(fromDateTime:NSDate, toDateTime:NSDate) -> Int {
         
@@ -49,6 +51,8 @@ class LocationDetailViewController: UIViewController  {
         
         labelLocationWhat.text = entry["Note"] as String!
         labelLocationWhere.text = entry["Doing"] as String!
+        labelLocationAddress.text = entry["Address"] as String!
+        labelLocationDetailedDate.text = entry["RecordedAt"] as String!
         
         var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
         view.insertSubview(vista, atIndex: 0)
