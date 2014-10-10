@@ -48,11 +48,18 @@ class LocationDetailViewController: UIViewController  {
         }
         
         labelLocationName.text = message
-        
+
         labelLocationWhat.text = entry["Note"] as String!
         labelLocationWhere.text = entry["Doing"] as String!
         labelLocationAddress.text = entry["Address"] as String!
-        labelLocationDetailedDate.text = entry["RecordedAt"] as String!
+        
+        if entry["RecordedAt"] != nil {
+            println(entry["RecordedAt"])
+//            var formatter:NSDateFormatter = NSDateFormatter()
+//            formatter.dateFormat = "yyyy-MM-dd"
+//            var date:NSDate = entry["RecordedAt"] as NSDate
+//            labelLocationDetailedDate.text = formatter.stringFromDate(date)
+        }
         
         var vista: UIView = BackgroundView(frame: CGRectMake(0,0,view.bounds.width,view.bounds.height))
         view.insertSubview(vista, atIndex: 0)
