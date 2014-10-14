@@ -14,6 +14,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     var firstLoad:Bool = true
     @IBOutlet weak var tableViewCell: UITableViewCell!
     @IBOutlet weak var addressBar: UISearchBar!
+    @IBOutlet weak var imageCategory: UIButton!
     
     var items: [AnyObject] = []
     
@@ -57,25 +58,52 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
         
-//        let rect : CGRect = CGRectMake(0,0,0,0)
-//        var vista : UIView = UIView(frame: rect)
-//        let gradient : CAGradientLayer = CAGradientLayer()
-//        gradient.frame = vista.bounds
-//        
-//        let cor1 = UIColor(hex:0xABCA8E).CGColor
-//        let cor2 = UIColor(hex:0x7DA93D).CGColor
-//
-//        let arrayColors: Array <AnyObject> = [cor1, cor2]
-//        
-//        gradient.colors = arrayColors
-//        tableViewCell.layer.insertSublayer(gradient, atIndex: 0)
-        
-        
-        
         var notes:UILabel = cell.viewWithTag(100) as UILabel
         notes.text = self.items[indexPath.row]["Doing"] as String?
         
         var doing:UILabel = cell.viewWithTag(99) as UILabel
+        
+        var category:UIButton = cell.viewWithTag(98) as UIButton
+        var img:UIImage = UIImage(named: "953-paw-print")
+        
+        var cat = self.items[indexPath.row]["Category"] as String?
+        
+        if cat == nil {
+            cat = ""
+        }
+        
+        switch (cat!) {
+            case "car":
+                img = UIImage(named: "815-car")
+                break;
+            case "walk":
+                img = UIImage(named: "944-walking-man")
+                break;
+            case "study":
+                img = UIImage(named: "897-graduation-cap")
+                break;
+            case "work":
+                img = UIImage(named: "1008-desktop")
+                break;
+            case "food":
+                img = UIImage(named: "932-utensils")
+                break;
+            case "drink":
+                img = UIImage(named: "957-beer-mug")
+                break;
+            case "paw":
+                img = UIImage(named: "953-paw-print")
+                break;
+            case "study":
+                img = UIImage(named: "897-graduation-cap")
+                break;
+
+            
+          default:
+            break;
+        }
+        
+        category.setImage(img, forState: UIControlState.Normal)
         
 //        var date:NSDate = self.items[indexPath.row].createdAt as NSDate
 //        

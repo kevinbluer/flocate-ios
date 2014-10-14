@@ -18,10 +18,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var mapCurrentLocation: MKMapView!
     @IBOutlet weak var buttonCategoryWorld: UIButton!
     @IBOutlet weak var scrollViewCategory: UIScrollView!
+    
     @IBOutlet weak var buttonCategoryCar: UIButton!
     @IBOutlet weak var buttonCategoryPlane: UIButton!
     @IBOutlet weak var buttonCategoryMeal: UIButton!
+    @IBOutlet weak var buttonCategoryPaw: UIButton!
+    @IBOutlet weak var buttonCategoryDrink: UIButton!
+    @IBOutlet weak var buttonCategoryWalk: UIButton!
+    @IBOutlet weak var buttonCategoryWork: UIButton!
+    @IBOutlet weak var buttonCategoryStudy: UIButton!
     
+    var category:String = ""
     var locationPopulated:Bool = false
     var manager:CLLocationManager!
     var lat:Double?
@@ -29,8 +36,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var country:String?
     var city:String?
     var address:String?
-    
-    var category:String = ""
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
@@ -243,6 +248,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             checkin.setObject(city, forKey: "City")
             checkin.setObject(country, forKey: "Country")
             checkin.setObject(address, forKey: "Address")
+            checkin.setObject(category, forKey: "Category")
             checkin.setObject(NSDate.date(), forKey: "RecordedAt")
             
             var relation = checkin.relationForKey("User")
@@ -285,14 +291,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // TODO rename this function
         // TODO put the icons in a 2 row grid
         
-        // TODO - deselect all of them, THEN select the 'sent' one
-        // slight clunky, but works for now
-        
         buttonCategoryCar.selected = false
         buttonCategoryPlane.selected = false
+        buttonCategoryPaw.selected = false
+        buttonCategoryDrink.selected = false
+        buttonCategoryWalk.selected = false
+        buttonCategoryWork.selected = false
         buttonCategoryMeal.selected = false
+        buttonCategoryStudy.selected = false
         
         sender.selected = !sender.selected
+        
+        category = sender.titleLabel!.text!
     }
     
     // hide the keyboard when the user presses return

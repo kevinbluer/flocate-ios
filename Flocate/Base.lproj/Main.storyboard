@@ -30,8 +30,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="42"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-b4-IPR">
-                                                <rect key="frame" x="8" y="7" width="28" height="28"/>
-                                                <state key="normal" image="815-car">
+                                                <rect key="frame" x="44" y="7" width="28" height="28"/>
+                                                <state key="normal" title="car" image="815-car">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="815-car-selected"/>
@@ -40,9 +40,20 @@
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2wc-VK-nV1"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY5-e7-lv6">
+                                                <rect key="frame" x="9" y="7" width="28" height="28"/>
+                                                <state key="normal" title="paw" image="953-paw-print">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="953-paw-print-selected"/>
+                                                <state key="highlighted" image="1053-pizza"/>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7ts-Nn-jz7"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-OD-tPo">
-                                                <rect key="frame" x="44" y="7" width="28" height="28"/>
-                                                <state key="normal" image="893-airplane">
+                                                <rect key="frame" x="80" y="7" width="26" height="28"/>
+                                                <state key="normal" title="plane" image="893-airplane">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="893-airplane-selected"/>
@@ -52,8 +63,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KG-EU-l0a">
-                                                <rect key="frame" x="78" y="7" width="28" height="28"/>
-                                                <state key="normal" image="932-utensils">
+                                                <rect key="frame" x="114" y="7" width="20" height="28"/>
+                                                <state key="normal" title="food" image="932-utensils">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="932-utensils-selected"/>
@@ -61,80 +72,48 @@
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="onV-FE-pjy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-jT-MOe">
-                                                <rect key="frame" x="116" y="7" width="28" height="28"/>
-                                                <state key="normal" image="995-martini-glass">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mzJ-Uy-2JR"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyz-mZ-WNI">
-                                                <rect key="frame" x="147" y="7" width="28" height="28"/>
-                                                <state key="normal" image="957-beer-mug">
+                                                <rect key="frame" x="150" y="7" width="22" height="28"/>
+                                                <state key="normal" title="drink" image="957-beer-mug">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected" image="957-beer-mug-selected"/>
                                                 <connections>
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0r8-ae-iVY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-hl-8CX">
-                                                <rect key="frame" x="183" y="7" width="28" height="28"/>
-                                                <state key="normal" image="985-castle">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RF-2b-Xdx">
+                                                <rect key="frame" x="187" y="7" width="14" height="28"/>
+                                                <state key="normal" title="walk" image="944-walking-man">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected" image="944-walking-man-selected"/>
                                                 <connections>
-                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="IZA-cS-Nc0"/>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FEu-LE-yqY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-MP-Uu7">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhk-QL-3ZP">
                                                 <rect key="frame" x="214" y="7" width="28" height="28"/>
-                                                <state key="normal" image="952-shopping-cart">
+                                                <state key="normal" title="work" image="1008-desktop">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected" image="1008-desktop-selected"/>
                                                 <connections>
-                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fDo-0v-8sj"/>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="raa-oB-FeB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2u-Rm-tiF">
-                                                <rect key="frame" x="252" y="7" width="28" height="28"/>
-                                                <state key="normal" image="897-graduation-cap">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-IH-1lc">
+                                                <rect key="frame" x="252" y="8" width="28" height="28"/>
+                                                <state key="normal" title="study" image="897-graduation-cap">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="selected" image="897-graduation-cap-selected"/>
                                                 <connections>
-                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hS3-mS-a95"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkp-fv-1Rk">
-                                                <rect key="frame" x="286" y="7" width="28" height="28"/>
-                                                <state key="normal" image="1087-soccer-ball">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YJ1-VC-ijQ"/>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3XM-1E-F0y"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICW-XF-rYB">
-                                        <rect key="frame" x="323" y="6" width="28" height="28"/>
-                                        <state key="normal" image="1088-tennis-ball">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xd2-n1-FnH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvH-vx-Jrd">
-                                        <rect key="frame" x="359" y="6" width="28" height="28"/>
-                                        <state key="normal" image="1094-sail-boat-2">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7Ct-UO-T4D"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </scrollView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-bs-8Uq">
@@ -199,8 +178,13 @@
                     <tabBarItem key="tabBarItem" title="Add" image="947-target-reticle" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="buttonCategoryCar" destination="ih3-b4-IPR" id="iEm-9D-LaG"/>
+                        <outlet property="buttonCategoryDrink" destination="Nyz-mZ-WNI" id="qvy-IL-Lre"/>
                         <outlet property="buttonCategoryMeal" destination="0KG-EU-l0a" id="hwt-cS-JYB"/>
+                        <outlet property="buttonCategoryPaw" destination="PY5-e7-lv6" id="W9L-G8-dxf"/>
                         <outlet property="buttonCategoryPlane" destination="4eg-OD-tPo" id="hMD-cx-j07"/>
+                        <outlet property="buttonCategoryStudy" destination="zWO-IH-1lc" id="1bl-CR-tmb"/>
+                        <outlet property="buttonCategoryWalk" destination="2RF-2b-Xdx" id="q6Z-YM-XLq"/>
+                        <outlet property="buttonCategoryWork" destination="zhk-QL-3ZP" id="X4o-Xe-ALt"/>
                         <outlet property="buttonCategoryWorld" destination="ih3-b4-IPR" id="A6b-V1-s3C"/>
                         <outlet property="locationDoing" destination="hlF-o4-nN2" id="Lfb-Ej-idz"/>
                         <outlet property="locationNote" destination="Gpu-Xc-ZuN" id="LoZ-js-RWv"/>
@@ -453,9 +437,9 @@
                                                     <color key="textColor" red="0.80392163989999998" green="0.80392163989999998" blue="0.80392163989999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-Sn-xsU">
+                                                <button opaque="NO" tag="98" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-Sn-xsU">
                                                     <rect key="frame" x="12" y="15" width="26" height="28"/>
-                                                    <state key="normal" image="945-radar">
+                                                    <state key="normal" image="953-paw-print">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -755,10 +739,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1008-desktop" width="28" height="26"/>
+        <image name="1008-desktop-selected" width="28" height="26"/>
         <image name="1053-pizza" width="26" height="28"/>
-        <image name="1087-soccer-ball" width="28" height="28"/>
-        <image name="1088-tennis-ball" width="28" height="28"/>
-        <image name="1094-sail-boat-2" width="28" height="28"/>
         <image name="1100-list-2" width="28" height="22"/>
         <image name="723-location-arrow" width="28" height="28"/>
         <image name="736-zoom-in" width="28" height="28"/>
@@ -770,15 +753,16 @@
         <image name="893-airplane" width="26" height="28"/>
         <image name="893-airplane-selected" width="26" height="28"/>
         <image name="897-graduation-cap" width="28" height="22"/>
+        <image name="897-graduation-cap-selected" width="28" height="22"/>
         <image name="901-repeat" width="28" height="22"/>
         <image name="932-utensils" width="20" height="28"/>
         <image name="932-utensils-selected" width="20" height="28"/>
-        <image name="945-radar" width="28" height="28"/>
+        <image name="944-walking-man" width="14" height="28"/>
+        <image name="944-walking-man-selected" width="14" height="28"/>
         <image name="947-target-reticle" width="28" height="28"/>
-        <image name="952-shopping-cart" width="28" height="20"/>
+        <image name="953-paw-print" width="28" height="28"/>
         <image name="953-paw-print-selected" width="28" height="28"/>
         <image name="957-beer-mug" width="22" height="28"/>
-        <image name="985-castle" width="18" height="28"/>
-        <image name="995-martini-glass" width="26" height="28"/>
+        <image name="957-beer-mug-selected" width="22" height="28"/>
     </resources>
 </document>
