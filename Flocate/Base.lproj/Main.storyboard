@@ -103,13 +103,23 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-IH-1lc">
-                                                <rect key="frame" x="252" y="8" width="28" height="28"/>
+                                                <rect key="frame" x="254" y="8" width="28" height="28"/>
                                                 <state key="normal" title="study" image="897-graduation-cap">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="897-graduation-cap-selected"/>
                                                 <connections>
                                                     <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3XM-1E-F0y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jda-iN-7nu">
+                                                <rect key="frame" x="288" y="7" width="12" height="28"/>
+                                                <state key="normal" title="work" image="1001-neck-tie">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="1001-neck-tie-selected"/>
+                                                <connections>
+                                                    <action selector="buttonTouchUpCategoryWorld:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gSn-pr-umX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -749,6 +759,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1001-neck-tie" width="9" height="28"/>
+        <image name="1001-neck-tie-selected" width="9" height="28"/>
         <image name="1008-desktop" width="28" height="26"/>
         <image name="1008-desktop-selected" width="28" height="26"/>
         <image name="1053-pizza" width="26" height="28"/>
