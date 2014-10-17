@@ -18,6 +18,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var mapCurrentLocation: MKMapView!
     @IBOutlet weak var buttonCategoryWorld: UIButton!
     @IBOutlet weak var scrollViewCategory: UIScrollView!
+    @IBOutlet weak var segmentedControlVisibility: UISegmentedControl!
     
     @IBOutlet weak var buttonCategoryCar: UIButton!
     @IBOutlet weak var buttonCategoryPlane: UIButton!
@@ -36,6 +37,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var country:String?
     var city:String?
     var address:String?
+    var visibility:String = "public"
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
@@ -250,6 +252,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             checkin.setObject(address, forKey: "Address")
             checkin.setObject(category, forKey: "Category")
             checkin.setObject(NSDate.date(), forKey: "RecordedAt")
+            checkin.setObject(visibility, forKey: "Visibility")
             
             var relation = checkin.relationForKey("User")
             relation.addObject(PFUser.currentUser())
@@ -286,10 +289,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         }
     }
     
+    @IBAction func segmentedVisibility(sender: AnyObject) {
+        visibility = segmentedControlVisibility.titleForSegmentAtIndex(segmentedControlVisibility.selectedSegmentIndex)!
+    }
+    
     @IBAction func buttonTouchUpCategoryWorld(sender: UIButton) {
-        
-        // TODO rename this function
-        // TODO put the icons in a 2 row grid
         
         buttonCategoryCar.selected = false
         buttonCategoryPlane.selected = false

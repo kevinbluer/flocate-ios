@@ -169,6 +169,9 @@
                                     <segment title="Private"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentedVisibility:" destination="9pv-A4-QxB" eventType="valueChanged" id="lDf-pL-41B"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.47058826679999999" green="0.70588237050000002" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
@@ -211,6 +214,7 @@
                         <outlet property="mapCurrentLocation" destination="W5y-bs-8Uq" id="M7B-Vv-42g"/>
                         <outlet property="saveLocationButton" destination="ogq-sE-z7g" id="rUV-JP-Vf2"/>
                         <outlet property="scrollViewCategory" destination="2LD-4m-cDk" id="gt4-cz-roS"/>
+                        <outlet property="segmentedControlVisibility" destination="8Xf-JY-6ah" id="jmi-RG-z3M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
