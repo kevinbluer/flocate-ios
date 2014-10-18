@@ -19,6 +19,7 @@ class LocationMapController: UIViewController {
     var locationArray:[AnyObject] = []
     var locationCounter:Int = 0
     var locationTotal:Int = 0
+    var currentHeight:CLLocationDegrees = 0.01
     
     
     override func viewDidLoad() {
@@ -79,7 +80,7 @@ class LocationMapController: UIViewController {
             
             // if it's the latest pin, zoom in and show the info
             if counter == 0 {
-                var span = MKCoordinateSpanMake(0.01, 0.01)
+                var span = MKCoordinateSpanMake(self.currentHeight, self.currentHeight)
                 var region = MKCoordinateRegion(center: location, span: span)
                 self.mapLocationsAll.setRegion(region, animated: true)
                 self.mapLocationsAll.selectAnnotation(pinLocation, animated: true)
@@ -164,21 +165,34 @@ class LocationMapController: UIViewController {
     }
     
     @IBAction func buttonTouchUpZoomIn(sender: AnyObject) {
-        var currentRegion = mapLocationsAll.region
-        currentRegion.span.latitudeDelta = 0.01
-        currentRegion.span.longitudeDelta = 0.01
-        self.mapLocationsAll.setRegion(currentRegion, animated: true)
+        
+        if (currentHeight > 0.01) {
+        
+            currentHeight -= 1
+            
+            var currentRegion = mapLocationsAll.region
+            currentRegion.span.latitudeDelta = currentHeight
+            currentRegion.span.longitudeDelta = currentHeight
+            self.mapLocationsAll.setRegion(currentRegion, animated: true)
+        }
     }
     
     @IBAction func buttonTouchUpZoomOut(sender: AnyObject) {
-        var currentRegion = mapLocationsAll.region
-        currentRegion.span.latitudeDelta = 100
-        currentRegion.span.longitudeDelta = 100
-        self.mapLocationsAll.setRegion(currentRegion, animated: true)
+        
+        if currentHeight < 100.01 {
+            
+            currentHeight += 1
+        
+            var currentRegion = mapLocationsAll.region
+            currentRegion.span.latitudeDelta = currentHeight
+            currentRegion.span.longitudeDelta = currentHeight
+            self.mapLocationsAll.setRegion(currentRegion, animated: true)
+        }
     }
     
     @IBAction func buttonTouchUpRefresh(sender: AnyObject) {
         locationCounter = 0
+        currentHeight = 0.01
         refreshMap()
     }
     
