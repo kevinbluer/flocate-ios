@@ -146,8 +146,14 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                         self.locationNote.text = pm.subLocality + ", " + pm.locality
                         self.locationPopulated = true
                     }
-                    self.country = pm.country
-                    self.city = pm.locality
+                
+                    if pm.country != nil {
+                        self.country = pm.country
+                    }
+                
+                    if pm.locality != nil {
+                        self.city = pm.locality
+                    }
                 
                     // get the full address
                     var addressLines = pm.addressDictionary["FormattedAddressLines"] as NSArray
