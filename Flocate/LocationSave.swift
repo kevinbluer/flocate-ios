@@ -106,8 +106,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             let vc = storyboard.instantiateViewControllerWithIdentifier("signup") as UIViewController;
             self.presentViewController(vc, animated: true, completion: nil);
         }
-        
-        
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
@@ -257,6 +255,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             checkin.setObject(country, forKey: "Country")
             checkin.setObject(address, forKey: "Address")
             checkin.setObject(category, forKey: "Category")
+            checkin.setObject("Mongol Rally", forKey: "Trip")
             checkin.setObject(NSDate.date(), forKey: "RecordedAt")
             checkin.setObject(visibility, forKey: "Visibility")
             
