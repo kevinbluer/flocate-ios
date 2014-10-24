@@ -64,7 +64,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         var doing:UILabel = cell.viewWithTag(99) as UILabel
         
         var category:UIButton = cell.viewWithTag(98) as UIButton
-        var img:UIImage = UIImage(named: "953-paw-print")
+        var img:UIImage = UIImage(named: "953-paw-print")!
         
         var cat = self.items[indexPath.row]["Category"] as String?
         
@@ -74,28 +74,28 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         
         switch (cat!) {
             case "car":
-                img = UIImage(named: "815-car")
+                img = UIImage(named: "815-car")!
                 break;
             case "walk":
-                img = UIImage(named: "944-walking-man")
+                img = UIImage(named: "944-walking-man")!
                 break;
             case "study":
-                img = UIImage(named: "897-graduation-cap")
+                img = UIImage(named: "897-graduation-cap")!
                 break;
             case "work":
-                img = UIImage(named: "1008-desktop")
+                img = UIImage(named: "1008-desktop")!
                 break;
             case "food":
-                img = UIImage(named: "932-utensils")
+                img = UIImage(named: "932-utensils")!
                 break;
             case "drink":
-                img = UIImage(named: "957-beer-mug")
+                img = UIImage(named: "957-beer-mug")!
                 break;
             case "paw":
-                img = UIImage(named: "953-paw-print")
+                img = UIImage(named: "953-paw-print")!
                 break;
             case "study":
-                img = UIImage(named: "897-graduation-cap")
+                img = UIImage(named: "897-graduation-cap")!
                 break;
 
             

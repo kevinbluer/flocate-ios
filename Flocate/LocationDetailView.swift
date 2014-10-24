@@ -31,7 +31,7 @@ class LocationDetailViewController: UIViewController  {
     
     override func viewDidLoad() {
         
-        var days:Int = daysBetweenDate(entry.createdAt, toDateTime:NSDate.date())
+        var days:Int = daysBetweenDate(entry.createdAt, toDateTime:NSDate())
         
         var message:String = ""
         
