@@ -38,6 +38,35 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         return self.items.count;
     }
     
+    func newViewForHeaderOrFooterWithText(text: String) -> UIView{
+        let headerLabel = newLabelWithTitle(text)
+        
+        /* Move the label 10 points to the right */
+        headerLabel.frame.origin.x += 10
+        /* Go 5 points down in y axis */
+        headerLabel.frame.origin.y = 5
+        
+        /* Give the container view 10 points more in width than our label
+        because the label needs a 10 extra points left-margin */
+        let resultFrame = CGRect(x: 0,
+            y: 0,
+            width: headerLabel.frame.size.width + 10,
+            height: headerLabel.frame.size.height)
+        
+        let headerView = UIView(frame: resultFrame)
+        headerView.addSubview(headerLabel)
+        
+        return headerView
+    }
+    
+    func newLabelWithTitle(title: String) -> UILabel{
+        let label = UILabel()
+        label.text = title
+        label.backgroundColor = UIColor.clearColor()
+        label.sizeToFit()
+        return label
+    }
+    
     func searchBarSearchButtonClicked( searchBar: UISearchBar!)
     {
         if (addressBar.text == "") {
@@ -55,7 +84,32 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         }
     }
     
+    func tableView(tableView: UITableView!,
+        titleForHeaderInSection section: Int) -> String!{
+            var returnHeader = "Grouping"
+            
+            // TODO - Figure out why 'section' is always 0
+            
+            if self.items.count > 0 {
+                var note = self.items[section]["Note"] as String
+                println(section)
+                if note == "Central, Hong Kong" {
+                    // println("there")
+                    // returnHeader = self.items[section]["Note"] as String
+                    newViewForHeaderOrFooterWithText(note)
+                } else {
+                    // println("here")
+                    newViewForHeaderOrFooterWithText(note)
+                    returnHeader = note
+                }
+                
+            }
+            
+            return returnHeader
+    }
+    
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
@@ -136,6 +190,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(tableView: UITableView!,
+        heightForHeaderInSection section: Int) -> CGFloat{
+            return 30
+    }
+    
 
     @IBAction func clickLoadLatest(sender: AnyObject) {
         
