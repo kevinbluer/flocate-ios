@@ -18,6 +18,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     var items: [AnyObject] = []
     
+    var sectionTitles:NSArray = ["A", "B", "C"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,14 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return self.items.count;
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        return 3
+    }
+    
+    func sectionIndexTitlesForTableView(tableView: UITableView!) -> NSArray {
+        return sectionTitles
     }
     
     func newViewForHeaderOrFooterWithText(text: String) -> UIView{
@@ -90,15 +100,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
             
             // TODO - Figure out why 'section' is always 0
             
+//            println(self.items.count)
+            
             if self.items.count > 0 {
                 var note = self.items[section]["Note"] as String
-                println(section)
                 if note == "Central, Hong Kong" {
-                    // println("there")
+                    println("there")
                     // returnHeader = self.items[section]["Note"] as String
                     newViewForHeaderOrFooterWithText(note)
+                    returnHeader = "Yo"
                 } else {
-                    // println("here")
+                    println("here")
                     newViewForHeaderOrFooterWithText(note)
                     returnHeader = note
                 }
@@ -108,9 +120,15 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
             return returnHeader
     }
     
+//    func tableView(tableView: UITableView!,
+//    viewForHeaderInSection section: Int) -> UIView!{
+//        println("mornin")
+//        return newViewForHeaderOrFooterWithText("Section \(section) Header")
+//    }
+    
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems") as UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems", forIndexPath: indexPath) as UITableViewCell
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
         notes.text = self.items[indexPath.row]["Doing"] as String?
