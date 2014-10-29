@@ -18,7 +18,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     var items: [AnyObject] = []
     
-    var sectionTitles:NSArray = ["A", "B", "C"]
+    var sectionTitles:NSArray = ["0", "1", "2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,10 +98,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         titleForHeaderInSection section: Int) -> String!{
             var returnHeader = "Grouping"
             
-            // TODO - Figure out why 'section' is always 0
-            
-//            println(self.items.count)
-            
             if self.items.count > 0 {
                 var note = self.items[section]["Note"] as String
                 if note == "Central, Hong Kong" {
@@ -110,9 +106,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
                     newViewForHeaderOrFooterWithText(note)
                     returnHeader = "Yo"
                 } else {
-                    println("here")
-                    newViewForHeaderOrFooterWithText(note)
-                    returnHeader = note
+                    //println("here")
+                    // newViewForHeaderOrFooterWithText(note)
+                    returnHeader = "Today"
                 }
                 
             }
@@ -129,6 +125,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         var cell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems", forIndexPath: indexPath) as UITableViewCell
+        
+        println(indexPath)
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
         notes.text = self.items[indexPath.row]["Doing"] as String?
