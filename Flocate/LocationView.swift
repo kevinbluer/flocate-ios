@@ -37,50 +37,123 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        
+        // this function determines where each row goes
+        // if date falls within a certain range than determine it here
+        // note that this is called for each section...as returned in the function below
+        
+        // aha - section is the index of the section
+        
+        if items.count > 0 {
+            println("yo")
+//            println(items.count)
+//            
+//            var days:Int = daysBetweenDate(items[section].createdAt, toDateTime:NSDate())
+//            
+//            if days == 0 {
+//                println(items[section].createdAt)
+//                println("today yo")
+//                
+//            } else {
+//                println("yesterday yo")
+//            }
+//            
+        }
+        
+        
+        
+        
         return self.items.count;
     }
     
+    func daysBetweenDate(fromDateTime:NSDate, toDateTime:NSDate) -> Int {
+        
+        let cal = NSCalendar.currentCalendar()
+        let unit:NSCalendarUnit = .DayCalendarUnit
+        
+        let components = cal.components(unit, fromDate: fromDateTime, toDate: toDateTime, options: nil)
+        
+        return components.day
+    }
+    
+    // determines the number of sections
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 3
+        return 1
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView!) -> NSArray {
-        return sectionTitles
+    // this is the section that determines what header it appears under
+    // note that the
+    func tableView(tableView: UITableView!,
+        titleForHeaderInSection section: Int) -> String!{
+            
+            // println(section);
+            
+            // NOTE
+            // These are rendered upon
+            
+            var returnHeader = "Today"
+            
+            if section == 1 {
+                returnHeader = "Yesterday"
+            } else if section == 2 {
+                returnHeader = "Prior"
+            }
+            
+            //            if self.items.count > 0 {
+            //                var note = self.items[section]["Note"] as String
+            //                if note == "Central, Hong Kong" {
+            //                    println("there")
+            //                    // returnHeader = self.items[section]["Note"] as String
+            //                    newViewForHeaderOrFooterWithText(note)
+            //                    returnHeader = "Yo"
+            //                } else {
+            //                    //println("here")
+            //                    // newViewForHeaderOrFooterWithText(note)
+            //                    returnHeader = "Today"
+            //                }
+            //                
+            //            }
+            
+            return returnHeader
     }
     
-    func sectionForSectionIndexTitle(tableView: UITableView!, sectionForSectionIndexTitle title: NSString, atIndex index: NSInteger) -> NSInteger {
-        println("yo")
-        return 0
-    }
+//    func sectionIndexTitlesForTableView(tableView: UITableView!) -> NSArray {
+//        return sectionTitles
+//    }
     
-    func newViewForHeaderOrFooterWithText(text: String) -> UIView{
-        let headerLabel = newLabelWithTitle(text)
-        
-        /* Move the label 10 points to the right */
-        headerLabel.frame.origin.x += 10
-        /* Go 5 points down in y axis */
-        headerLabel.frame.origin.y = 5
-        
-        /* Give the container view 10 points more in width than our label
-        because the label needs a 10 extra points left-margin */
-        let resultFrame = CGRect(x: 0,
-            y: 0,
-            width: headerLabel.frame.size.width + 10,
-            height: headerLabel.frame.size.height)
-        
-        let headerView = UIView(frame: resultFrame)
-        headerView.addSubview(headerLabel)
-        
-        return headerView
-    }
+    // facilitates the jumping to the respective section (from the index list on the left hand side of the table)
+//    func sectionForSectionIndexTitle(tableView: UITableView!, sectionForSectionIndexTitle title: NSString, atIndex index: NSInteger) -> NSInteger {
+//        return 0
+//    }
     
-    func newLabelWithTitle(title: String) -> UILabel{
-        let label = UILabel()
-        label.text = title
-        label.backgroundColor = UIColor.clearColor()
-        label.sizeToFit()
-        return label
-    }
+//    func newViewForHeaderOrFooterWithText(text: String) -> UIView{
+//        let headerLabel = newLabelWithTitle(text)
+//        
+//        /* Move the label 10 points to the right */
+//        headerLabel.frame.origin.x += 10
+//        /* Go 5 points down in y axis */
+//        headerLabel.frame.origin.y = 5
+//        
+//        /* Give the container view 10 points more in width than our label
+//        because the label needs a 10 extra points left-margin */
+//        let resultFrame = CGRect(x: 0,
+//            y: 0,
+//            width: headerLabel.frame.size.width + 10,
+//            height: headerLabel.frame.size.height)
+//        
+//        let headerView = UIView(frame: resultFrame)
+//        headerView.addSubview(headerLabel)
+//        
+//        return headerView
+//    }
+//    
+//    func newLabelWithTitle(title: String) -> UILabel{
+//        let label = UILabel()
+//        label.text = title
+//        label.backgroundColor = UIColor.clearColor()
+//        label.sizeToFit()
+//        return label
+//    }
     
     func searchBarSearchButtonClicked( searchBar: UISearchBar!)
     {
@@ -99,38 +172,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         }
     }
     
-    func tableView(tableView: UITableView!,
-        titleForHeaderInSection section: Int) -> String!{
-            
-            // NOTE
-            // These are rendered upon
-            
-            var returnHeader = "Today"
-            
-            if section == 1 {
-                returnHeader = "Yesterday"
-            } else if section == 2 {
-                returnHeader = "Prior"
-            }
-            
-//            if self.items.count > 0 {
-//                var note = self.items[section]["Note"] as String
-//                if note == "Central, Hong Kong" {
-//                    println("there")
-//                    // returnHeader = self.items[section]["Note"] as String
-//                    newViewForHeaderOrFooterWithText(note)
-//                    returnHeader = "Yo"
-//                } else {
-//                    //println("here")
-//                    // newViewForHeaderOrFooterWithText(note)
-//                    returnHeader = "Today"
-//                }
-//                
-//            }
-            
-            return returnHeader
-    }
-    
 //    func tableView(tableView: UITableView!,
 //    viewForHeaderInSection section: Int) -> UIView!{
 //        println("mornin")
@@ -144,6 +185,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         var cell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems", forIndexPath: indexPath) as UITableViewCell
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
+        
         notes.text = self.items[indexPath.row]["Doing"] as String?
         
         var doing:UILabel = cell.viewWithTag(99) as UILabel
@@ -214,6 +256,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         let vc = storyboard.instantiateViewControllerWithIdentifier("MapDetail") as LocationDetailViewController;
         vc.entry = self.items[indexPath.row]
         
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil);
     }
 
@@ -272,9 +315,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
 
     }
     
-    @IBAction func buttonViewLocationDetail(sender: AnyObject) {
-        
-    }
+//    @IBAction func buttonViewLocationDetail(sender: AnyObject) {
+//        
+//    }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 //        if segue.identifier == "segueShowLocationDetail"{
