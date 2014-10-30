@@ -48,6 +48,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         return sectionTitles
     }
     
+    func sectionForSectionIndexTitle(tableView: UITableView!, sectionForSectionIndexTitle title: NSString, atIndex index: NSInteger) -> NSInteger {
+        println("yo")
+        return 0
+    }
+    
     func newViewForHeaderOrFooterWithText(text: String) -> UIView{
         let headerLabel = newLabelWithTitle(text)
         
@@ -96,22 +101,32 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView!,
         titleForHeaderInSection section: Int) -> String!{
-            var returnHeader = "Grouping"
             
-            if self.items.count > 0 {
-                var note = self.items[section]["Note"] as String
-                if note == "Central, Hong Kong" {
-                    println("there")
-                    // returnHeader = self.items[section]["Note"] as String
-                    newViewForHeaderOrFooterWithText(note)
-                    returnHeader = "Yo"
-                } else {
-                    //println("here")
-                    // newViewForHeaderOrFooterWithText(note)
-                    returnHeader = "Today"
-                }
-                
+            // NOTE
+            // These are rendered upon
+            
+            var returnHeader = "Today"
+            
+            if section == 1 {
+                returnHeader = "Yesterday"
+            } else if section == 2 {
+                returnHeader = "Prior"
             }
+            
+//            if self.items.count > 0 {
+//                var note = self.items[section]["Note"] as String
+//                if note == "Central, Hong Kong" {
+//                    println("there")
+//                    // returnHeader = self.items[section]["Note"] as String
+//                    newViewForHeaderOrFooterWithText(note)
+//                    returnHeader = "Yo"
+//                } else {
+//                    //println("here")
+//                    // newViewForHeaderOrFooterWithText(note)
+//                    returnHeader = "Today"
+//                }
+//                
+//            }
             
             return returnHeader
     }
@@ -124,9 +139,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems", forIndexPath: indexPath) as UITableViewCell
+//        println(indexPath)
         
-        println(indexPath)
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("tvcItems", forIndexPath: indexPath) as UITableViewCell
         
         var notes:UILabel = cell.viewWithTag(100) as UILabel
         notes.text = self.items[indexPath.row]["Doing"] as String?
