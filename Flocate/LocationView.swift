@@ -18,12 +18,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     var items: [AnyObject] = []
     
-    var sectionTitles:NSArray = ["0", "1", "2"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         if firstLoad {
             populateTable("")
@@ -44,21 +42,24 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         
         // aha - section is the index of the section
         
-        if items.count > 0 {
-            println("yo")
-//            println(items.count)
+        
+        
+//        if self.items.count > 0 {
+//            
+//            // TODO need to determine the current item in context item
 //            
 //            var days:Int = daysBetweenDate(items[section].createdAt, toDateTime:NSDate())
 //            
 //            if days == 0 {
-//                println(items[section].createdAt)
-//                println("today yo")
+//                
+//                // actually return the number that match (else return hmmm...the number that??)
+//                return 1
 //                
 //            } else {
 //                println("yesterday yo")
 //            }
-//            
-        }
+////
+//        }
         
         
         
@@ -78,20 +79,21 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     // determines the number of sections
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        
+        // println("here")
         return 1
     }
     
     // this is the section that determines what header it appears under
     // note that the
-    func tableView(tableView: UITableView!,
-        titleForHeaderInSection section: Int) -> String!{
+    func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String!{
             
             // println(section);
             
             // NOTE
             // These are rendered upon
             
-            var returnHeader = "Today"
+            var returnHeader = "Last Month"
             
             if section == 1 {
                 returnHeader = "Yesterday"
@@ -299,6 +301,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UISearchBarDe
                 var counter:Int = 0
                 
                 for object in objects {
+                    
+                    // TODO consider putting into a dictionary with categories (today, yesterday, last week, last month, older)
                     
                     self.items += [object]
                     
