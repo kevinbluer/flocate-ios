@@ -269,18 +269,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Switch on Logging Every Hour / Day / Never" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
-                                <rect key="frame" x="131" y="289" width="339" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've been to X countries!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
                                 <rect key="frame" x="198" y="125" width="210" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Logging Frequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
+                                <rect key="frame" x="226" y="289" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-wi-CIL">
+                                <rect key="frame" x="250" y="331" width="101" height="29"/>
+                                <segments>
+                                    <segment title="Daily"/>
+                                    <segment title="Never"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -290,6 +298,7 @@
                             <constraint firstAttribute="centerX" secondItem="8Cr-5M-fXe" secondAttribute="centerX" id="jka-yZ-VDw"/>
                             <constraint firstAttribute="centerX" secondItem="Zcs-ae-sni" secondAttribute="centerX" id="kr4-ot-NaO"/>
                             <constraint firstAttribute="centerX" secondItem="4P9-sx-gSs" secondAttribute="centerX" id="nBZ-Ze-l1c"/>
+                            <constraint firstAttribute="centerX" secondItem="WYz-wi-CIL" secondAttribute="centerX" id="pMG-hg-Eej"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="You" image="779-users" id="hQi-Qd-MDF"/>
