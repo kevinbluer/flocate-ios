@@ -34,6 +34,7 @@
 		23CA0BB619C5AA9E002C71F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BB519C5AA9E002C71F0 /* SystemConfiguration.framework */; };
 		23CA0BBC19C5AB13002C71F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BBA19C5AB13002C71F0 /* Bolts.framework */; };
 		23CA0BBD19C5AB13002C71F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0BBB19C5AB13002C71F0 /* Parse.framework */; };
+		23D38AC61A0676A2007FF88C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 23D38AC51A0676A2007FF88C /* README.md */; };
 		23F72BAB19A853BE00C119E9 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F72BAA19A853BE00C119E9 /* data.plist */; };
 		23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */; };
 		23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */; };
@@ -83,6 +84,7 @@
 		23CA0BB719C5AAAA002C71F0 /* Flocate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flocate-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		23CA0BBA19C5AB13002C71F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		23CA0BBB19C5AB13002C71F0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		23D38AC51A0676A2007FF88C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		23F72BAA19A853BE00C119E9 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		23FBA1E2199FAD2700E95BC8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Flocate/SwiftyJSON.swift; sourceTree = "<group>"; };
 		23FBA1E619A0F86F00E95BC8 /* LocationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMap.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		237552C0199F4EE300F2C856 /* Flocate */ = {
 			isa = PBXGroup;
 			children = (
+				23D38AC51A0676A2007FF88C /* README.md */,
 				23CA0BB719C5AAAA002C71F0 /* Flocate-Bridging-Header.h */,
 				237552C3199F4EE300F2C856 /* AppDelegate.swift */,
 				23222A7D19A9F12C00935E91 /* RegisterLogin.swift */,
@@ -343,6 +346,7 @@
 				23FBA1E719A0F86F00E95BC8 /* LocationMap.swift in Sources */,
 				23FBA1E3199FAD2700E95BC8 /* SwiftyJSON.swift in Sources */,
 				23222A7A19A86B1100935E91 /* FlocateSettings.swift in Sources */,
+				23D38AC61A0676A2007FF88C /* README.md in Sources */,
 				23908C5219AA1FC3007549BB /* UIColorExtensions.swift in Sources */,
 				2389C9F519DCEFF800EEC5C3 /* ArrayExtension.swift in Sources */,
 			);
