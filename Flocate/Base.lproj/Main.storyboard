@@ -252,7 +252,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQ1-X5-BpI">
-                                <rect key="frame" x="276" y="243" width="49" height="30"/>
+                                <rect key="frame" x="276" y="381" width="49" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -263,6 +263,12 @@
                                     <action selector="logoutButton:" destination="p2Z-cQ-mhN" eventType="touchUpInside" id="vyM-gU-4rG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've recorded ... places!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-5M-fXe">
+                                <rect key="frame" x="198" y="82" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've been to ... countries!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
                                 <rect key="frame" x="198" y="125" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -270,25 +276,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Logging Frequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-hA-dAK">
-                                <rect key="frame" x="226" y="289" width="148" height="21"/>
+                                <rect key="frame" x="226" y="250" width="148" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-wi-CIL">
-                                <rect key="frame" x="250" y="331" width="101" height="29"/>
+                                <rect key="frame" x="250" y="293" width="101" height="29"/>
                                 <segments>
                                     <segment title="Daily"/>
                                     <segment title="Never"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've recorded ... places!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-5M-fXe">
-                                <rect key="frame" x="198" y="82" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -308,7 +308,7 @@
                         <outlet property="settingsFirstname" destination="Zcs-ae-sni" id="4aU-PY-IRQ"/>
                         <outlet property="settingsLastname" destination="4P9-sx-gSs" id="Vbn-9u-iNc"/>
                         <outlet property="settingsPlacesCount" destination="8Cr-5M-fXe" id="no3-hO-4YY"/>
-                        <outlet property="settlingsCountriesCount" destination="4uy-Fe-HNH" id="OPN-Q0-sw8"/>
+                        <outlet property="settlingsCountriesCount" destination="4uy-Fe-HNH" id="S8x-Ja-z5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzA-Lr-3na" userLabel="First Responder" sceneMemberID="firstResponder"/>

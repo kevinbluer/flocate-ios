@@ -23,6 +23,7 @@ class FlocateSettings: UIViewController {
         view.insertSubview(vista, atIndex: 0)
 
         var currentUser = PFUser.currentUser()
+        currentUser.refresh()
         
         settingsFirstname.text = currentUser.username
         settingsLastname.text = currentUser.email
@@ -38,9 +39,8 @@ class FlocateSettings: UIViewController {
         
         if currentUser != nil {
             
-            var countryList = currentUser["CountryList"]
-            
-//            self.settingsPlacesCount.text = "You've been to \(countryList.count) countries!"
+            var countryList = currentUser["CountryList"] as NSArray
+            settlingsCountriesCount.text = "You've been to \(countryList.count) countries!"
             
         }
         
