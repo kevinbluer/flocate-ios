@@ -14,6 +14,7 @@ class FlocateSettings: UIViewController {
     @IBOutlet weak var settingsLastname: UILabel!
     @IBOutlet weak var settingsEmail: UILabel!
     @IBOutlet weak var settingsPlacesCount: UILabel!
+    @IBOutlet weak var settlingsCountriesCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,16 @@ class FlocateSettings: UIViewController {
                 self.settingsPlacesCount.text = "You've recorded \(objects.count) places!"
             }
         }
+        
+        if currentUser != nil {
+            
+            var countryList = currentUser["CountryList"]
+            
+//            self.settingsPlacesCount.text = "You've been to \(countryList.count) countries!"
+            
+        }
+        
+        
         
 //      
         

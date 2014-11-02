@@ -263,14 +263,8 @@
                                     <action selector="logoutButton:" destination="p2Z-cQ-mhN" eventType="touchUpInside" id="vyM-gU-4rG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've recorded ... places!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-5M-fXe">
-                                <rect key="frame" x="198" y="96" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've been to X countries!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
-                                <rect key="frame" x="198" y="125" width="210" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've been to ... countries!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
+                                <rect key="frame" x="198" y="125" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -289,9 +283,16 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've recorded ... places!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-5M-fXe">
+                                <rect key="frame" x="198" y="82" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4uy-Fe-HNH" secondAttribute="centerX" id="7IK-zD-gph"/>
                             <constraint firstAttribute="centerX" secondItem="zQ1-X5-BpI" secondAttribute="centerX" id="9r9-x9-1Qv"/>
                             <constraint firstAttribute="centerX" secondItem="OUr-C2-bD1" secondAttribute="centerX" id="HDP-WO-Iux"/>
                             <constraint firstAttribute="centerX" secondItem="efa-hA-dAK" secondAttribute="centerX" id="Hoa-JH-AwX"/>
@@ -307,6 +308,7 @@
                         <outlet property="settingsFirstname" destination="Zcs-ae-sni" id="4aU-PY-IRQ"/>
                         <outlet property="settingsLastname" destination="4P9-sx-gSs" id="Vbn-9u-iNc"/>
                         <outlet property="settingsPlacesCount" destination="8Cr-5M-fXe" id="no3-hO-4YY"/>
+                        <outlet property="settlingsCountriesCount" destination="4uy-Fe-HNH" id="OPN-Q0-sw8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzA-Lr-3na" userLabel="First Responder" sceneMemberID="firstResponder"/>
