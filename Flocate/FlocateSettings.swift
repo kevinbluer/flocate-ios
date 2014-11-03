@@ -40,11 +40,17 @@ class FlocateSettings: UIViewController {
         if currentUser != nil {
             
             var countryList = currentUser["CountryList"] as NSArray
-            settlingsCountriesCount.text = "You've been to \(countryList.count) countries!"
+            settlingsCountriesCount.text = "You've been to \(countryList.count) countries"
+            
+            if countryList.count > 0 {
+                settlingsCountriesCount.text = settlingsCountriesCount.text + " " + countryList[0] + "!"
+            } else {
+                settlingsCountriesCount.text += settlingsCountriesCount.text + "!"
+            }
             
         }
         
-        
+        // TODO save the above to local storage (and pull from this first)...before updating from parse
         
 //      
         
