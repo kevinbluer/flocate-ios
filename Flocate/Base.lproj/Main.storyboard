@@ -269,8 +269,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've been to ... countries!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
-                                <rect key="frame" x="198" y="125" width="214" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You've been to ... countries!" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Fe-HNH">
+                                <rect key="frame" x="16" y="125" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -296,10 +296,17 @@
                             <constraint firstAttribute="centerX" secondItem="zQ1-X5-BpI" secondAttribute="centerX" id="9r9-x9-1Qv"/>
                             <constraint firstAttribute="centerX" secondItem="OUr-C2-bD1" secondAttribute="centerX" id="HDP-WO-Iux"/>
                             <constraint firstAttribute="centerX" secondItem="efa-hA-dAK" secondAttribute="centerX" id="Hoa-JH-AwX"/>
+                            <constraint firstItem="WYz-wi-CIL" firstAttribute="top" secondItem="efa-hA-dAK" secondAttribute="bottom" constant="22" id="iYv-oK-EoS"/>
+                            <constraint firstItem="Zcs-ae-sni" firstAttribute="top" secondItem="4uy-Fe-HNH" secondAttribute="bottom" constant="23" id="j0q-Of-8gH"/>
                             <constraint firstAttribute="centerX" secondItem="8Cr-5M-fXe" secondAttribute="centerX" id="jka-yZ-VDw"/>
                             <constraint firstAttribute="centerX" secondItem="Zcs-ae-sni" secondAttribute="centerX" id="kr4-ot-NaO"/>
+                            <constraint firstItem="efa-hA-dAK" firstAttribute="top" secondItem="4P9-sx-gSs" secondAttribute="bottom" constant="21" id="kvQ-cb-oUQ"/>
                             <constraint firstAttribute="centerX" secondItem="4P9-sx-gSs" secondAttribute="centerX" id="nBZ-Ze-l1c"/>
+                            <constraint firstItem="4P9-sx-gSs" firstAttribute="top" secondItem="Zcs-ae-sni" secondAttribute="bottom" constant="18" id="o0d-HS-tCD"/>
+                            <constraint firstItem="4uy-Fe-HNH" firstAttribute="leading" secondItem="d2w-br-GJ5" secondAttribute="leadingMargin" constant="12" id="pBN-cQ-0aR"/>
                             <constraint firstAttribute="centerX" secondItem="WYz-wi-CIL" secondAttribute="centerX" id="pMG-hg-Eej"/>
+                            <constraint firstItem="4uy-Fe-HNH" firstAttribute="trailing" secondItem="d2w-br-GJ5" secondAttribute="trailingMargin" constant="12" id="tAs-gf-ycw"/>
+                            <constraint firstAttribute="centerX" secondItem="4uy-Fe-HNH" secondAttribute="centerX" id="wti-VU-Zrl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="You" image="779-users" id="hQi-Qd-MDF"/>
