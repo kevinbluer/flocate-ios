@@ -292,8 +292,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32427588419999998" green="0.53492272419999998" blue="0.17678213719999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="8Cr-5M-fXe" firstAttribute="top" secondItem="OUr-C2-bD1" secondAttribute="bottom" constant="24" id="73n-Uu-FpC"/>
                             <constraint firstAttribute="centerX" secondItem="4uy-Fe-HNH" secondAttribute="centerX" id="7IK-zD-gph"/>
                             <constraint firstAttribute="centerX" secondItem="zQ1-X5-BpI" secondAttribute="centerX" id="9r9-x9-1Qv"/>
+                            <constraint firstItem="4uy-Fe-HNH" firstAttribute="top" secondItem="8Cr-5M-fXe" secondAttribute="bottom" constant="22" id="C7I-1f-mVI"/>
                             <constraint firstAttribute="centerX" secondItem="OUr-C2-bD1" secondAttribute="centerX" id="HDP-WO-Iux"/>
                             <constraint firstAttribute="centerX" secondItem="efa-hA-dAK" secondAttribute="centerX" id="Hoa-JH-AwX"/>
                             <constraint firstItem="WYz-wi-CIL" firstAttribute="top" secondItem="efa-hA-dAK" secondAttribute="bottom" constant="22" id="iYv-oK-EoS"/>

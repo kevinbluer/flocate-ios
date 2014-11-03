@@ -42,10 +42,12 @@ class FlocateSettings: UIViewController {
             var countryList = currentUser["CountryList"] as NSArray
             settlingsCountriesCount.text = "You've been to \(countryList.count) countries"
             
-            var firstCountry:String = countryList[0] as String
-            
-            if countryList.count > 0 {
-                settlingsCountriesCount.text = settlingsCountriesCount.text! + " including " + firstCountry + "!"
+            if countryList.count >= 3 {
+                var firstCountry:String = countryList[0] as String
+                var secondCountry:String = countryList[1] as String
+                var thirdCountry:String = countryList[2] as String
+                
+                settlingsCountriesCount.text = settlingsCountriesCount.text! + " including " + firstCountry + ", " + secondCountry + " and " + thirdCountry + "!"
             } else {
                 settlingsCountriesCount.text = settlingsCountriesCount.text! + "!"
             }
