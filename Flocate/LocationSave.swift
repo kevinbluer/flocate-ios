@@ -255,9 +255,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             checkin.setObject(country, forKey: "Country")
             checkin.setObject(address, forKey: "Address")
             checkin.setObject(category, forKey: "Category")
-            checkin.setObject("Mongol Rally", forKey: "Trip")
+//            checkin.setObject("Mongol Rally", forKey: "Trip")
             checkin.setObject(NSDate(), forKey: "RecordedAt")
             checkin.setObject(visibility, forKey: "Visibility")
+            
             
             var relation = checkin.relationForKey("User")
             relation.addObject(PFUser.currentUser())
