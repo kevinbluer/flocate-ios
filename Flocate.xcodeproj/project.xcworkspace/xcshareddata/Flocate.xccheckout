@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF4F4B8E-81B4-4F7A-A96E-AA42B2B92C0E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Flocate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FCF3397D03031B17C47FF29BC61C3ED79E925568</key>
+		<string>https://github.com/kevinbluer/flocate.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Flocate.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FCF3397D03031B17C47FF29BC61C3ED79E925568</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kevinbluer/flocate.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FCF3397D03031B17C47FF29BC61C3ED79E925568</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FCF3397D03031B17C47FF29BC61C3ED79E925568</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mob-flocate-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

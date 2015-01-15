@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Add-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LD-4m-cDk">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LD-4m-cDk">
                                 <rect key="frame" x="26" y="206" width="546" height="42"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="va0-c8-4wD">
@@ -198,7 +198,7 @@
                             <constraint firstAttribute="centerX" secondItem="4qo-eo-gee" secondAttribute="centerX" id="zYB-f3-ZEs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" image="947-target-reticle" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="947-target-reticle" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="buttonCategoryCar" destination="ih3-b4-IPR" id="iEm-9D-LaG"/>
                         <outlet property="buttonCategoryDrink" destination="Nyz-mZ-WNI" id="qvy-IL-Lre"/>
@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-382"/>
         </scene>
-        <!--You-->
+        <!--Flocate Settings-->
         <scene sceneID="qvf-Nl-tmJ">
             <objects>
                 <viewController id="p2Z-cQ-mhN" customClass="FlocateSettings" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
@@ -311,7 +311,7 @@
                             <constraint firstAttribute="centerX" secondItem="4uy-Fe-HNH" secondAttribute="centerX" id="wti-VU-Zrl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="You" image="779-users" id="hQi-Qd-MDF"/>
+                    <tabBarItem key="tabBarItem" title="" image="779-users" id="hQi-Qd-MDF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingsFirstname" destination="Zcs-ae-sni" id="4aU-PY-IRQ"/>
@@ -324,7 +324,7 @@
             </objects>
             <point key="canvasLocation" x="-58" y="1101"/>
         </scene>
-        <!--Map-->
+        <!--Location Map Controller-->
         <scene sceneID="c4a-M3-H8K">
             <objects>
                 <viewController storyboardIdentifier="xyz" id="4Ko-IW-dUo" customClass="LocationMapController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
@@ -422,7 +422,7 @@
                             <constraint firstItem="uPQ-5a-lp1" firstAttribute="leading" secondItem="nzi-oN-uiD" secondAttribute="leadingMargin" constant="12" id="yCp-bm-eky"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="852-map" id="GkO-vA-tyE"/>
+                    <tabBarItem key="tabBarItem" title="" image="852-map" id="GkO-vA-tyE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonRefresh" destination="dST-PU-I0y" id="0gt-is-GmF"/>
@@ -436,7 +436,7 @@
             </objects>
             <point key="canvasLocation" x="599" y="984"/>
         </scene>
-        <!--Places-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
@@ -533,7 +533,7 @@
                             <constraint firstItem="5W9-ob-LZD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="voO-Ez-ICk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Places" image="1100-list-2" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="1100-list-2" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="addressBar" destination="1Uw-bO-FyZ" id="KFR-Z8-Rrw"/>
                         <outlet property="loadLatest" destination="AuV-MM-hHC" id="wLa-zF-aF7"/>
@@ -648,7 +648,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n4p-kM-PMN">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n4p-kM-PMN">
                                 <rect key="frame" x="197" y="72" width="207" height="29"/>
                                 <segments>
                                     <segment title="Login"/>
@@ -662,10 +662,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="953-paw-print-selected" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-tg-rLp">
                                 <rect key="frame" x="288" y="28" width="25" height="25"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40K-6w-IEw">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40K-6w-IEw">
                                 <rect key="frame" x="150" y="300" width="300" height="300"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-5n-7xI">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-5n-7xI">
                                         <rect key="frame" x="47" y="24" width="207" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -705,7 +705,7 @@
                                     <constraint firstItem="VfB-5n-7xI" firstAttribute="top" secondItem="40K-6w-IEw" secondAttribute="top" constant="24" id="q6Y-QG-lKl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-1n-c0a">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-1n-c0a">
                                 <rect key="frame" x="150" y="184" width="300" height="148"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MzP-lc-1ah">
@@ -778,10 +778,10 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" customClass="CustomTabBarController" customModule="Flocate" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="barTintColor" red="0.48627454042434692" green="0.73725491762161255" blue="0.25490197539329529" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
